@@ -1,0 +1,466 @@
+[31-Jul-2014 17:03:18 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/login_with_google.php:72) in /home/makerlab/public_html/gate/login_with_google.php on line 96
+[31-Jul-2014 17:03:45 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/login_with_google.php:72) in /home/makerlab/public_html/gate/login_with_google.php on line 96
+[01-Aug-2014 09:08:24 Africa/Johannesburg] PHP Fatal error:  Class 'ErrorLog' not found in /home/makerlab/public_html/gate/lib/User.php on line 64
+[01-Aug-2014 09:09:15 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/lib/User.php:65) in /home/makerlab/public_html/gate/login_with_google.php on line 97
+[01-Aug-2014 09:09:52 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/lib/User.php:65) in /home/makerlab/public_html/gate/login_with_google.php on line 97
+[01-Aug-2014 09:17:32 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/lib/User.php:65) in /home/makerlab/public_html/gate/login_with_google.php on line 97
+[01-Aug-2014 09:18:04 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/login_with_google.php:75) in /home/makerlab/public_html/gate/login_with_google.php on line 97
+[01-Aug-2014 09:31:00 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/login_with_google.php:68) in /home/makerlab/public_html/gate/login_with_google.php on line 73
+[01-Aug-2014 09:45:08 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/login_with_google.php:16) in /home/makerlab/public_html/gate/login_with_google.php on line 18
+[01-Aug-2014 09:57:24 Africa/Johannesburg] PHP Warning:  require(Tools.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/test.php on line 30
+[01-Aug-2014 09:57:24 Africa/Johannesburg] PHP Warning:  require(Tools.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/test.php on line 30
+[01-Aug-2014 09:57:24 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'Tools.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/test.php on line 30
+[01-Aug-2014 10:25:41 Africa/Johannesburg] PHP Fatal error:  Using $this when not in object context in /home/makerlab/public_html/gate/test.php on line 24
+[01-Aug-2014 11:24:18 Africa/Johannesburg] PHP Warning:  require(PATH/config/database.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:24:18 Africa/Johannesburg] PHP Warning:  require(PATH/config/database.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:24:18 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'PATH/config/database.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:25:44 Africa/Johannesburg] PHP Warning:  require() [<a href='function.require'>function.require</a>]: http:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:25:44 Africa/Johannesburg] PHP Warning:  require(http://gate.makerlabs.co.za/lib/Tools.php) [<a href='function.require'>function.require</a>]: failed to open stream: no suitable wrapper could be found in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:25:44 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http://gate.makerlabs.co.za/lib/Tools.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:13 Africa/Johannesburg] PHP Warning:  require() [<a href='function.require'>function.require</a>]: http:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:13 Africa/Johannesburg] PHP Warning:  require(http://gate.makerlabs.co.za/lib/Tools.php) [<a href='function.require'>function.require</a>]: failed to open stream: no suitable wrapper could be found in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:13 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http://gate.makerlabs.co.za/lib/Tools.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:16 Africa/Johannesburg] PHP Warning:  require() [<a href='function.require'>function.require</a>]: http:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:16 Africa/Johannesburg] PHP Warning:  require(http://gate.makerlabs.co.za/lib/Tools.php) [<a href='function.require'>function.require</a>]: failed to open stream: no suitable wrapper could be found in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:16 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http://gate.makerlabs.co.za/lib/Tools.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:37 Africa/Johannesburg] PHP Warning:  require(gate.makerlabs.co.za/lib/Tools.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:37 Africa/Johannesburg] PHP Warning:  require(gate.makerlabs.co.za/lib/Tools.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 11:26:37 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'gate.makerlabs.co.za/lib/Tools.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/Bootstrap.php on line 13
+[01-Aug-2014 12:24:15 Africa/Johannesburg] PHP Fatal error:  Class 'Session' not found in /home/makerlab/public_html/gate/index.php on line 3
+[01-Aug-2014 12:24:56 Africa/Johannesburg] PHP Warning:  session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Trying to destroy uninitialized session in /home/makerlab/public_html/gate/lib/Session.php on line 25
+[02-Aug-2014 17:34:06 Africa/Johannesburg] PHP Fatal error:  Cannot access private property User::$id in /home/makerlab/public_html/gate/lib/Smarty/libs/sysplugins/smarty_internal_templatebase.php(151) : eval()'d code on line 33
+[02-Aug-2014 17:39:11 Africa/Johannesburg] PHP Fatal error:  Cannot use object of type User as array in /home/makerlab/public_html/gate/lib/Smarty/libs/sysplugins/smarty_internal_templatebase.php(165) : eval()'d code on line 33
+[04-Aug-2014 07:07:25 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_facebook.php on line 12
+[04-Aug-2014 07:07:25 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_facebook.php on line 12
+[04-Aug-2014 07:07:25 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/login_with_facebook.php on line 12
+[04-Aug-2014 07:08:04 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_facebook.php on line 12
+[04-Aug-2014 07:08:04 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_facebook.php on line 12
+[04-Aug-2014 07:08:04 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/login_with_facebook.php on line 12
+[04-Aug-2014 07:50:29 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_twitter.php on line 12
+[04-Aug-2014 07:50:29 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_twitter.php on line 12
+[04-Aug-2014 07:50:29 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/login_with_twitter.php on line 12
+[04-Aug-2014 07:50:46 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_twitter.php on line 12
+[04-Aug-2014 07:50:46 Africa/Johannesburg] PHP Warning:  require(http.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/login_with_twitter.php on line 12
+[04-Aug-2014 07:50:46 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'http.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/login_with_twitter.php on line 12
+[04-Aug-2014 07:50:54 Africa/Johannesburg] OAuth client: Checking the OAuth token authorization state
+[04-Aug-2014 07:50:54 Africa/Johannesburg] OAuth client: The OAuth access token is not set
+[04-Aug-2014 07:50:54 Africa/Johannesburg] OAuth client: Requesting the unauthorized OAuth token
+[04-Aug-2014 07:50:54 Africa/Johannesburg] OAuth client: Accessing the OAuth request token at https://api.twitter.com/oauth/request_token
+[04-Aug-2014 07:50:54 Africa/Johannesburg] Connecting to api.twitter.com
+[04-Aug-2014 07:50:54 Africa/Johannesburg] Resolving HTTP server domain "api.twitter.com"...
+[04-Aug-2014 07:50:54 Africa/Johannesburg] Connecting to HTTP server IP 199.16.156.199 port 443...
+[04-Aug-2014 07:50:55 Africa/Johannesburg] Connected to api.twitter.com
+[04-Aug-2014 07:50:55 Africa/Johannesburg] C GET /oauth/request_token HTTP/1.1
+[04-Aug-2014 07:50:55 Africa/Johannesburg] C Host: api.twitter.com
+[04-Aug-2014 07:50:55 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 07:50:55 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 07:50:55 Africa/Johannesburg] C Authorization: OAuth oauth_consumer_key="iRYYAqoGxRUJLsZWHVm87gv60",oauth_nonce="122b3f51ae4d80576a0cc0b678a68a64",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1407131454",oauth_version="1.0",oauth_callback="http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_twitter.php",oauth_signature="E8ltGBn7dqI98BWTl50wMhCuRis%3D"
+[04-Aug-2014 07:50:55 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 07:50:55 Africa/Johannesburg] C 
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S HTTP/1.1 401 Unauthorized
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S content-length: 178
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S content-security-policy-report-only: default-src https:; connect-src https:; font-src https: data:; frame-src https: http://*.twimg.com http://itunes.apple.com about: javascript:; img-src https: data:; media-src https:; object-src https:; script-src 'unsafe-inline' 'unsafe-eval' about: https:; style-src 'unsafe-inline' https:; report-uri https://twitter.com/i/csp_report?a=NVXW433SMFUWY%3D%3D%3D&ro=true;
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S content-type: text/html; charset=utf-8
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S date: Mon, 04 Aug 2014 05:50:56 GMT
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S expires: Tue, 31 Mar 1981 05:00:00 GMT
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S last-modified: Mon, 04 Aug 2014 05:50:56 GMT
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S pragma: no-cache
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S server: tfe
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S set-cookie: _twitter_sess=BAh7CCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCNQUkp9HAToHaWQiJWJl%250AMmU2Yzk4ZTk2ZjdhY2NlNzEzYjg3ODhhZTZmNjg0--be85c6ad735c0f02b441b67935c0a38b88a2185c; domain=.twitter.com; path=/; secure; HttpOnly
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S set-cookie: guest_id=v1%3A140713145667683559; Domain=.twitter.com; Path=/; Expires=Wed, 03-Aug-2016 05:50:56 UTC
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S status: 401 Unauthorized
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S strict-transport-security: max-age=631138519
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S vary: Accept-Encoding
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S www-authenticate: OAuth realm="https://api.twitter.com"
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S x-content-type-options: nosniff
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S x-frame-options: SAMEORIGIN
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S x-mid: f0114d253a8bdef5f38a050090d999c2aa1be029
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S x-transaction: 832241aa1aea355a
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S x-ua-compatible: IE=edge,chrome=1
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S x-xss-protection: 1; mode=block
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S 
+[04-Aug-2014 07:50:56 Africa/Johannesburg] S <?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <error>Desktop applications only support the oauth_callback value 'oob'</error>
+  <request>/oauth/request_token</request>
+</hash>
+
+[04-Aug-2014 07:50:56 Africa/Johannesburg] Keeping the connection alive to api.twitter.com
+[04-Aug-2014 07:50:56 Africa/Johannesburg] OAuth client: Could not retrieve the OAuth access token. Error: it was not possible to access the OAuth request token: it was returned an unexpected response status 401 Response: <?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <error>Desktop applications only support the oauth_callback value 'oob'</error>
+  <request>/oauth/request_token</request>
+</hash>
+
+[04-Aug-2014 07:50:56 Africa/Johannesburg] OAuth client: Resetting the access token status for OAuth server located at https://api.twitter.com/oauth/access_token
+[04-Aug-2014 07:54:05 Africa/Johannesburg] OAuth client: Checking the OAuth token authorization state
+[04-Aug-2014 07:54:05 Africa/Johannesburg] OAuth client: The OAuth access token is not set
+[04-Aug-2014 07:54:05 Africa/Johannesburg] OAuth client: Requesting the unauthorized OAuth token
+[04-Aug-2014 07:54:05 Africa/Johannesburg] OAuth client: Accessing the OAuth request token at https://api.twitter.com/oauth/request_token
+[04-Aug-2014 07:54:05 Africa/Johannesburg] Connecting to api.twitter.com
+[04-Aug-2014 07:54:05 Africa/Johannesburg] Resolving HTTP server domain "api.twitter.com"...
+[04-Aug-2014 07:54:05 Africa/Johannesburg] Connecting to HTTP server IP 199.16.156.104 port 443...
+[04-Aug-2014 07:54:06 Africa/Johannesburg] Connected to api.twitter.com
+[04-Aug-2014 07:54:06 Africa/Johannesburg] C GET /oauth/request_token HTTP/1.1
+[04-Aug-2014 07:54:06 Africa/Johannesburg] C Host: api.twitter.com
+[04-Aug-2014 07:54:06 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 07:54:06 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 07:54:06 Africa/Johannesburg] C Authorization: OAuth oauth_consumer_key="iRYYAqoGxRUJLsZWHVm87gv60",oauth_nonce="7417ee52a5d3e8f55df2a8c3b7115269",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1407131645",oauth_version="1.0",oauth_callback="http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_twitter.php",oauth_signature="8swP5%2BA9rrvfxXU22PCrfQkh87E%3D"
+[04-Aug-2014 07:54:06 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 07:54:06 Africa/Johannesburg] C 
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S HTTP/1.1 401 Unauthorized
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S content-length: 178
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S content-security-policy-report-only: default-src https:; connect-src https:; font-src https: data:; frame-src https: http://*.twimg.com http://itunes.apple.com about: javascript:; img-src https: data:; media-src https:; object-src https:; script-src 'unsafe-inline' 'unsafe-eval' about: https:; style-src 'unsafe-inline' https:; report-uri https://twitter.com/i/csp_report?a=NVXW433SMFUWY%3D%3D%3D&ro=true;
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S content-type: text/html; charset=utf-8
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S date: Mon, 04 Aug 2014 05:54:07 GMT
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S expires: Tue, 31 Mar 1981 05:00:00 GMT
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S last-modified: Mon, 04 Aug 2014 05:54:07 GMT
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S pragma: no-cache
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S server: tfe
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S set-cookie: _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCDT%252BlJ9HAToHaWQiJWE0YzZiNmRiYmQyNzc1%250AZmU4ZjZjYTliMzE2ZTgzMGZjIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--c53229019765bda8b9f2a90a542e982b68a49c4c; domain=.twitter.com; path=/; secure; HttpOnly
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S set-cookie: guest_id=v1%3A140713164741165605; Domain=.twitter.com; Path=/; Expires=Wed, 03-Aug-2016 05:54:07 UTC
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S status: 401 Unauthorized
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S strict-transport-security: max-age=631138519
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S vary: Accept-Encoding
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S www-authenticate: OAuth realm="https://api.twitter.com"
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S x-content-type-options: nosniff
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S x-frame-options: SAMEORIGIN
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S x-mid: c85b502ec396fb7c25bd4f81b05b4071f4ad9219
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S x-transaction: 69149ae50fc19c93
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S x-ua-compatible: IE=edge,chrome=1
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S x-xss-protection: 1; mode=block
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S 
+[04-Aug-2014 07:54:07 Africa/Johannesburg] S <?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <error>Desktop applications only support the oauth_callback value 'oob'</error>
+  <request>/oauth/request_token</request>
+</hash>
+
+[04-Aug-2014 07:54:07 Africa/Johannesburg] Keeping the connection alive to api.twitter.com
+[04-Aug-2014 07:54:07 Africa/Johannesburg] OAuth client: Could not retrieve the OAuth access token. Error: it was not possible to access the OAuth request token: it was returned an unexpected response status 401 Response: <?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <error>Desktop applications only support the oauth_callback value 'oob'</error>
+  <request>/oauth/request_token</request>
+</hash>
+
+[04-Aug-2014 07:54:07 Africa/Johannesburg] OAuth client: Resetting the access token status for OAuth server located at https://api.twitter.com/oauth/access_token
+[04-Aug-2014 07:54:21 Africa/Johannesburg] OAuth client: Checking the OAuth token authorization state
+[04-Aug-2014 07:54:21 Africa/Johannesburg] OAuth client: The OAuth access token is not set
+[04-Aug-2014 07:54:21 Africa/Johannesburg] OAuth client: Requesting the unauthorized OAuth token
+[04-Aug-2014 07:54:21 Africa/Johannesburg] OAuth client: Accessing the OAuth request token at https://api.twitter.com/oauth/request_token
+[04-Aug-2014 07:54:21 Africa/Johannesburg] Connecting to api.twitter.com
+[04-Aug-2014 07:54:21 Africa/Johannesburg] Resolving HTTP server domain "api.twitter.com"...
+[04-Aug-2014 07:54:21 Africa/Johannesburg] Connecting to HTTP server IP 199.16.156.231 port 443...
+[04-Aug-2014 07:54:22 Africa/Johannesburg] Connected to api.twitter.com
+[04-Aug-2014 07:54:22 Africa/Johannesburg] C GET /oauth/request_token HTTP/1.1
+[04-Aug-2014 07:54:22 Africa/Johannesburg] C Host: api.twitter.com
+[04-Aug-2014 07:54:22 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 07:54:22 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 07:54:22 Africa/Johannesburg] C Authorization: OAuth oauth_consumer_key="iRYYAqoGxRUJLsZWHVm87gv60",oauth_nonce="f868536a3649036839a50df3fa239b2c",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1407131661",oauth_version="1.0",oauth_callback="http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_twitter.php",oauth_signature="o7IG4A4A%2B%2BwEA7naXikB4oHR0ko%3D"
+[04-Aug-2014 07:54:22 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 07:54:22 Africa/Johannesburg] C 
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S HTTP/1.1 401 Unauthorized
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S content-length: 178
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S content-security-policy-report-only: default-src https:; connect-src https:; font-src https: data:; frame-src https: http://*.twimg.com http://itunes.apple.com about: javascript:; img-src https: data:; media-src https:; object-src https:; script-src 'unsafe-inline' 'unsafe-eval' about: https:; style-src 'unsafe-inline' https:; report-uri https://twitter.com/i/csp_report?a=NVXW433SMFUWY%3D%3D%3D&ro=true;
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S content-type: text/html; charset=utf-8
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S date: Mon, 04 Aug 2014 05:54:23 GMT
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S expires: Tue, 31 Mar 1981 05:00:00 GMT
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S last-modified: Mon, 04 Aug 2014 05:54:23 GMT
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S pragma: no-cache
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S server: tfe
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S set-cookie: _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCMo7lZ9HAToHaWQiJWFhYTYyMTc4ZjM2YjVl%250ANzIyYzFlNGMxMzcwNGJjYTcyIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--667054281d837d5c07c8bb27129883c3462d73a2; domain=.twitter.com; path=/; secure; HttpOnly
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S set-cookie: guest_id=v1%3A140713166319573318; Domain=.twitter.com; Path=/; Expires=Wed, 03-Aug-2016 05:54:23 UTC
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S status: 401 Unauthorized
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S strict-transport-security: max-age=631138519
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S vary: Accept-Encoding
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S www-authenticate: OAuth realm="https://api.twitter.com"
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S x-content-type-options: nosniff
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S x-frame-options: SAMEORIGIN
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S x-mid: 5f4c43fb1d77920f6dc266ba1a96d4ae9f6e9477
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S x-transaction: 9f08add0af192b6e
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S x-ua-compatible: IE=edge,chrome=1
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S x-xss-protection: 1; mode=block
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S 
+[04-Aug-2014 07:54:23 Africa/Johannesburg] S <?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <error>Desktop applications only support the oauth_callback value 'oob'</error>
+  <request>/oauth/request_token</request>
+</hash>
+
+[04-Aug-2014 07:54:23 Africa/Johannesburg] Keeping the connection alive to api.twitter.com
+[04-Aug-2014 07:54:23 Africa/Johannesburg] OAuth client: Could not retrieve the OAuth access token. Error: it was not possible to access the OAuth request token: it was returned an unexpected response status 401 Response: <?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <error>Desktop applications only support the oauth_callback value 'oob'</error>
+  <request>/oauth/request_token</request>
+</hash>
+
+[04-Aug-2014 07:54:23 Africa/Johannesburg] OAuth client: Resetting the access token status for OAuth server located at https://api.twitter.com/oauth/access_token
+[04-Aug-2014 07:55:02 Africa/Johannesburg] OAuth client: Checking the OAuth token authorization state
+[04-Aug-2014 07:55:02 Africa/Johannesburg] OAuth client: The OAuth access token is not set
+[04-Aug-2014 07:55:02 Africa/Johannesburg] OAuth client: Requesting the unauthorized OAuth token
+[04-Aug-2014 07:55:02 Africa/Johannesburg] OAuth client: Accessing the OAuth request token at https://api.twitter.com/oauth/request_token
+[04-Aug-2014 07:55:02 Africa/Johannesburg] Connecting to api.twitter.com
+[04-Aug-2014 07:55:02 Africa/Johannesburg] Resolving HTTP server domain "api.twitter.com"...
+[04-Aug-2014 07:55:02 Africa/Johannesburg] Connecting to HTTP server IP 199.16.156.104 port 443...
+[04-Aug-2014 07:55:03 Africa/Johannesburg] Connected to api.twitter.com
+[04-Aug-2014 07:55:03 Africa/Johannesburg] C GET /oauth/request_token HTTP/1.1
+[04-Aug-2014 07:55:03 Africa/Johannesburg] C Host: api.twitter.com
+[04-Aug-2014 07:55:03 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 07:55:03 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 07:55:03 Africa/Johannesburg] C Authorization: OAuth oauth_consumer_key="iRYYAqoGxRUJLsZWHVm87gv60",oauth_nonce="c94ccd1a462bc459c1ac7e65a7549c11",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1407131702",oauth_version="1.0",oauth_callback="http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_twitter.php",oauth_signature="a0FHP1%2BQRPb3%2B3Pd0L9U6qV2Ks0%3D"
+[04-Aug-2014 07:55:03 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 07:55:03 Africa/Johannesburg] C 
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S HTTP/1.1 200 OK
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S content-length: 144
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S content-security-policy-report-only: default-src https:; connect-src https:; font-src https: data:; frame-src https: http://*.twimg.com http://itunes.apple.com about: javascript:; img-src https: data:; media-src https:; object-src https:; script-src 'unsafe-inline' 'unsafe-eval' about: https:; style-src 'unsafe-inline' https:; report-uri https://twitter.com/i/csp_report?a=NVXW433SMFUWY%3D%3D%3D&ro=true;
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S content-type: text/html; charset=utf-8
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S date: Mon, 04 Aug 2014 05:55:04 GMT
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S etag: "f3769aa05acd3d178bab89e1f767658e"
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S expires: Tue, 31 Mar 1981 05:00:00 GMT
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S last-modified: Mon, 04 Aug 2014 05:55:04 GMT
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S pragma: no-cache
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S server: tfe
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S set-cookie: _twitter_sess=BAh7BzoPY3JlYXRlZF9hdGwrCLLdlZ9HAToHaWQiJWFkMzM3OWFhOTAzYTgw%250AMGM1ODc1MmUzNDc1NjVhNGY4--753c0d4022faa78dc50e90c368b9b775149af33c; domain=.twitter.com; path=/; secure; HttpOnly
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S set-cookie: guest_id=v1%3A140713170471098791; Domain=.twitter.com; Path=/; Expires=Wed, 03-Aug-2016 05:55:04 UTC
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S status: 200 OK
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S strict-transport-security: max-age=631138519
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S vary: Accept-Encoding
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S x-content-type-options: nosniff
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S x-frame-options: SAMEORIGIN
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S x-mid: aec173d6cb92d3a6f40bad7e5aa1dfea58edf7c2
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S x-runtime: 0.02781
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S x-transaction: 9e43b1def82e5e3b
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S x-ua-compatible: IE=edge,chrome=1
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S x-xss-protection: 1; mode=block
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S 
+[04-Aug-2014 07:55:04 Africa/Johannesburg] S oauth_token=e2DNOzvHT6G0WqbvZC2Isu42jb7D1LWrEKn99pvkZQ&oauth_token_secret=10QY2br0cs2GV6qdDwzVAnABI6rFKYn4ZtcnCTEs&oauth_callback_confirmed=true
+[04-Aug-2014 07:55:04 Africa/Johannesburg] Keeping the connection alive to api.twitter.com
+[04-Aug-2014 07:55:04 Africa/Johannesburg] OAuth client: Redirecting to OAuth authorize page https://api.twitter.com/oauth/authenticate?oauth_token=e2DNOzvHT6G0WqbvZC2Isu42jb7D1LWrEKn99pvkZQ
+[04-Aug-2014 07:55:08 Africa/Johannesburg] OAuth client: Checking the OAuth token authorization state
+[04-Aug-2014 07:55:08 Africa/Johannesburg] OAuth client: The OAuth token is not yet authorized
+[04-Aug-2014 07:55:08 Africa/Johannesburg] OAuth client: Checking the OAuth token and verifier
+[04-Aug-2014 07:55:08 Africa/Johannesburg] OAuth client: Accessing the OAuth access token at https://api.twitter.com/oauth/access_token
+[04-Aug-2014 07:55:08 Africa/Johannesburg] Connecting to api.twitter.com
+[04-Aug-2014 07:55:08 Africa/Johannesburg] Resolving HTTP server domain "api.twitter.com"...
+[04-Aug-2014 07:55:08 Africa/Johannesburg] Connecting to HTTP server IP 199.16.156.231 port 443...
+[04-Aug-2014 07:55:09 Africa/Johannesburg] Connected to api.twitter.com
+[04-Aug-2014 07:55:09 Africa/Johannesburg] C GET /oauth/access_token HTTP/1.1
+[04-Aug-2014 07:55:09 Africa/Johannesburg] C Host: api.twitter.com
+[04-Aug-2014 07:55:09 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 07:55:09 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 07:55:09 Africa/Johannesburg] C Authorization: OAuth oauth_consumer_key="iRYYAqoGxRUJLsZWHVm87gv60",oauth_nonce="43f5a5d81e641de3fd6ca8f8e027fba9",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1407131708",oauth_version="1.0",oauth_token="e2DNOzvHT6G0WqbvZC2Isu42jb7D1LWrEKn99pvkZQ",oauth_verifier="FS8DdHv8BxTEQdHOZYfHlP8sSO54J8957tXJpybziM",oauth_signature="HNw64hQIjq0FtExZTzp8KOVh1jo%3D"
+[04-Aug-2014 07:55:09 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 07:55:09 Africa/Johannesburg] C 
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S HTTP/1.1 200 OK
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S content-length: 171
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S content-security-policy-report-only: default-src https:; connect-src https:; font-src https: data:; frame-src https: http://*.twimg.com http://itunes.apple.com about: javascript:; img-src https: data:; media-src https:; object-src https:; script-src 'unsafe-inline' 'unsafe-eval' about: https:; style-src 'unsafe-inline' https:; report-uri https://twitter.com/i/csp_report?a=NVXW433SMFUWY%3D%3D%3D&ro=true;
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S content-type: text/html; charset=utf-8
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S date: Mon, 04 Aug 2014 05:55:10 GMT
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S etag: "e1c4241fd1e4b95d19bc0b3999341daf"
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S expires: Tue, 31 Mar 1981 05:00:00 GMT
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S last-modified: Mon, 04 Aug 2014 05:55:09 GMT
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S pragma: no-cache
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S server: tfe
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S set-cookie: _twitter_sess=BAh7BzoPY3JlYXRlZF9hdGwrCPbxlZ9HAToHaWQiJTYxZTgxZjVlY2QxZDJj%250ANmY1OWFhNTVmNzQ5NmNlYzZm--b692427e743ed6d2f4a927e8a991b3b0754aa836; domain=.twitter.com; path=/; secure; HttpOnly
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S set-cookie: guest_id=v1%3A140713170989555368; Domain=.twitter.com; Path=/; Expires=Wed, 03-Aug-2016 05:55:10 UTC
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S status: 200 OK
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S strict-transport-security: max-age=631138519
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S vary: Accept-Encoding
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S x-content-type-options: nosniff
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S x-frame-options: SAMEORIGIN
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S x-mid: 8a738b5c66c4bead62cab03b7941e324158ef821
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S x-runtime: 0.06747
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S x-transaction: ff4781386b901746
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S x-ua-compatible: IE=edge,chrome=1
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S x-xss-protection: 1; mode=block
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S 
+[04-Aug-2014 07:55:09 Africa/Johannesburg] S oauth_token=138757059-hdaqdR3JPGrBkL6xDwHdcmXxIJrqOAx1ioK7lSCX&oauth_token_secret=f2wQOcrAiSxw9yM5AnPAEW02SGhzLgS3C8AvhzNO0zgYU&user_id=138757059&screen_name=devin_pearson
+[04-Aug-2014 07:55:09 Africa/Johannesburg] Keeping the connection alive to api.twitter.com
+[04-Aug-2014 07:55:09 Africa/Johannesburg] OAuth client: The OAuth token was authorized
+[04-Aug-2014 07:55:09 Africa/Johannesburg] OAuth client: Accessing the API call at https://api.twitter.com/1.1/account/verify_credentials.json
+[04-Aug-2014 07:55:09 Africa/Johannesburg] Connecting to api.twitter.com
+[04-Aug-2014 07:55:09 Africa/Johannesburg] Resolving HTTP server domain "api.twitter.com"...
+[04-Aug-2014 07:55:09 Africa/Johannesburg] Connecting to HTTP server IP 199.16.156.72 port 443...
+[04-Aug-2014 07:55:10 Africa/Johannesburg] Connected to api.twitter.com
+[04-Aug-2014 07:55:10 Africa/Johannesburg] C GET /1.1/account/verify_credentials.json HTTP/1.1
+[04-Aug-2014 07:55:10 Africa/Johannesburg] C Host: api.twitter.com
+[04-Aug-2014 07:55:10 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 07:55:10 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 07:55:10 Africa/Johannesburg] C Authorization: OAuth oauth_consumer_key="iRYYAqoGxRUJLsZWHVm87gv60",oauth_nonce="92c6039d7f187619ce6ff4153f26aa7b",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1407131709",oauth_version="1.0",oauth_token="138757059-hdaqdR3JPGrBkL6xDwHdcmXxIJrqOAx1ioK7lSCX",oauth_signature="LmXCXuBLZs4MAwTGAC9kzGrdwyg%3D"
+[04-Aug-2014 07:55:10 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 07:55:10 Africa/Johannesburg] C 
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S HTTP/1.1 200 OK
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S content-length: 2105
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S content-type: application/json;charset=utf-8
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S date: Mon, 04 Aug 2014 05:55:11 GMT
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S expires: Tue, 31 Mar 1981 05:00:00 GMT
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S last-modified: Mon, 04 Aug 2014 05:55:11 GMT
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S pragma: no-cache
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S server: tfe
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S set-cookie: lang=en
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S set-cookie: guest_id=v1%3A140713171153173291; Domain=.twitter.com; Path=/; Expires=Wed, 03-Aug-2016 05:55:11 UTC
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S status: 200 OK
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S strict-transport-security: max-age=631138519
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-access-level: read
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-content-type-options: nosniff
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-frame-options: SAMEORIGIN
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-rate-limit-limit: 15
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-rate-limit-remaining: 14
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-rate-limit-reset: 1407132611
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-transaction: b74e76104cbd51a3
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S x-xss-protection: 1; mode=block
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S 
+[04-Aug-2014 07:55:11 Africa/Johannesburg] S {"id":138757059,"id_str":"138757059","name":"Devin Pearson","screen_name":"devin_pearson","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":6,"friends_count":12,"listed_count":0,"created_at":"Fri Apr 30 14:01:33 +0000 2010","favourites_count":0,"utc_offset":7200,"time_zone":"Pretoria","geo_enabled":true,"verified":false,"statuses_count":4,"lang":"en","status":{"created_at":"Thu Apr 25 07:50:41 +0000 2013","id":327328795721879552,"id_str":"327328795721879552","text":"@MMAWear Still waiting for response on when you will send my order. Its been 3 weeks","source":"\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":313240934802415617,"in_reply_to_status_id_str":"313240934802415617","in_reply_to_user_id":171821650,"in_reply_to_user_id_str":"171821650","in_reply_to_screen_name":"MMAWear","geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"MMAWear","name":"MMAWear","id":171821650,"id_str":"171821650","indices":[0,8]}]},"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_0_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_0_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}
+[04-Aug-2014 07:55:11 Africa/Johannesburg] Keeping the connection alive to api.twitter.com
+[04-Aug-2014 07:55:11 Africa/Johannesburg] OAuth client: Resetting the access token status for OAuth server located at https://api.twitter.com/oauth/access_token
+[04-Aug-2014 08:35:19 Africa/Johannesburg] OAuth client: Checking if OAuth access token was already retrieved from https://graph.facebook.com/oauth/access_token
+[04-Aug-2014 08:35:19 Africa/Johannesburg] OAuth client: Checking the authentication state in URI /login_with_facebook.php
+[04-Aug-2014 08:35:19 Africa/Johannesburg] OAuth client: Redirecting to OAuth Dialog https://www.facebook.com/dialog/oauth?client_id=323921167771204&redirect_uri=http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_facebook.php&scope=email&state=1407128838-071b44
+[04-Aug-2014 08:35:20 Africa/Johannesburg] OAuth client: Checking if OAuth access token was already retrieved from https://graph.facebook.com/oauth/access_token
+[04-Aug-2014 08:35:20 Africa/Johannesburg] OAuth client: Checking the authentication state in URI /login_with_facebook.php
+[04-Aug-2014 08:35:20 Africa/Johannesburg] OAuth client: Redirecting to OAuth Dialog https://www.facebook.com/dialog/oauth?client_id=323921167771204&redirect_uri=http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_facebook.php&scope=email&state=1407128838-071b44
+[04-Aug-2014 08:35:23 Africa/Johannesburg] OAuth client: Checking if OAuth access token was already retrieved from https://graph.facebook.com/oauth/access_token
+[04-Aug-2014 08:35:23 Africa/Johannesburg] OAuth client: Checking the authentication state in URI /login_with_facebook.php?code=AQBnPaRWamMtE1SLg3zWvQo0jYl0DLz3oy_w3jlHXfUCYtWRaEUlIW07IA0QF2l_n_NEQt_9TMdi1Kh77GVVYs1FMHEGWmQuLKEs12a3TO_mEcEzVZy2QkIkFc1R-SW8sFZg_-XEQcZ_lV0yqC681WY-tiU3lgsLaGxkilMF86sAgUtKxdH6QO1b3hNtV9foPk6tRiSTafuIPXYt6UJWVd8tZhA_5z2-utxHya85LfwNUZGbXAeu2-G7LXXY368F5buPXmZeBYobVYyxrHFihhCKe-NP0DcI3e-I43HZMhKReVKNP2Qce0I-uAn6PbDgjiM&state=1407128838-071b44
+[04-Aug-2014 08:35:23 Africa/Johannesburg] OAuth client: Checking the authentication code
+[04-Aug-2014 08:35:23 Africa/Johannesburg] OAuth client: Accessing the OAuth access token at https://graph.facebook.com/oauth/access_token
+[04-Aug-2014 08:35:23 Africa/Johannesburg] Connecting to graph.facebook.com
+[04-Aug-2014 08:35:23 Africa/Johannesburg] Resolving HTTP server domain "graph.facebook.com"...
+[04-Aug-2014 08:35:23 Africa/Johannesburg] Connecting to HTTP server IP 66.220.158.19 port 443...
+[04-Aug-2014 08:35:24 Africa/Johannesburg] Connected to graph.facebook.com
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C POST /oauth/access_token HTTP/1.1
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C Host: graph.facebook.com
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C Content-Type: application/x-www-form-urlencoded
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C Content-Length: 507
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C 
+[04-Aug-2014 08:35:24 Africa/Johannesburg] C code=AQBnPaRWamMtE1SLg3zWvQo0jYl0DLz3oy_w3jlHXfUCYtWRaEUlIW07IA0QF2l_n_NEQt_9TMdi1Kh77GVVYs1FMHEGWmQuLKEs12a3TO_mEcEzVZy2QkIkFc1R-SW8sFZg_-XEQcZ_lV0yqC681WY-tiU3lgsLaGxkilMF86sAgUtKxdH6QO1b3hNtV9foPk6tRiSTafuIPXYt6UJWVd8tZhA_5z2-utxHya85LfwNUZGbXAeu2-G7LXXY368F5buPXmZeBYobVYyxrHFihhCKe-NP0DcI3e-I43HZMhKReVKNP2Qce0I-uAn6PbDgjiM&client_id=323921167771204&client_secret=0f76d398edfd734bcbc62cd765e36bbe&redirect_uri=http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_facebook.php&grant_type=authorization_code
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S HTTP/1.1 400 Bad Request
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S WWW-Authenticate: OAuth "Facebook Platform" "invalid_code" "Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request"
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Facebook-API-Version: v1.0
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Content-Type: application/json; charset=UTF-8
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Pragma: no-cache
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Access-Control-Allow-Origin: *
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S X-FB-Rev: 1353801
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Cache-Control: no-store
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Expires: Sat, 01 Jan 2000 00:00:00 GMT
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S X-FB-Debug: P4q8wJ9GlRBmW6v8NMbwOa5QPExgntJoV5pNUEVNaRcdYT/IegPkUoLsYAKxKjiwO8/1sCKTSACbtpXqM3bdww==
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Date: Mon, 04 Aug 2014 06:35:25 GMT
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Connection: keep-alive
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S Content-Length: 190
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S 
+[04-Aug-2014 08:35:25 Africa/Johannesburg] S {"error":{"message":"Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request","type":"OAuthException","code":100}}
+[04-Aug-2014 08:35:25 Africa/Johannesburg] Keeping the connection alive to graph.facebook.com
+[04-Aug-2014 08:35:25 Africa/Johannesburg] OAuth client: Could not retrieve the OAuth access token. Error: it was not possible to access the OAuth access token: it was returned an unexpected response status 400 Response: {"error":{"message":"Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request","type":"OAuthException","code":100}}
+[04-Aug-2014 08:38:46 Africa/Johannesburg] OAuth client: Checking if OAuth access token was already retrieved from https://graph.facebook.com/oauth/access_token
+[04-Aug-2014 08:38:46 Africa/Johannesburg] OAuth client: Checking the authentication state in URI /login_with_facebook.php
+[04-Aug-2014 08:38:46 Africa/Johannesburg] OAuth client: Redirecting to OAuth Dialog https://www.facebook.com/dialog/oauth?client_id=323921167771204&redirect_uri=http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_facebook.php&scope=email&state=1407128838-071b44
+[04-Aug-2014 08:38:56 Africa/Johannesburg] OAuth client: Checking if OAuth access token was already retrieved from https://graph.facebook.com/oauth/access_token
+[04-Aug-2014 08:38:56 Africa/Johannesburg] OAuth client: Checking the authentication state in URI /login_with_facebook.php?code=AQA5bDO5PwUoQotNJ7PEpRyLyAXt0AgvKvfh_c0kkw7XcHv2Hbq9ZhqAg4Sz0rjNBSh2f4e91GEAdvzoiB3Iujs_InS7PkuwR8y8bYr6jD3npPCVmyw-UbzKFd_y8n-rz0i8Jkbs8kdNIeVwLXL_13PprvGxUhqDNM7lCOZvPczQ49aLbNgOWLNWuimyCC5HvfW4ljxbmv5WGEN71uPek4huW4jiRiC3bNgxoMuqs1Y5YiDEcg-SFUafE3b0EMonmQepi8pzG1LFz1vkGAZYnTwGQMXcYDLW-jIyvY-FVJPevBpvDiYWn8oWqXK0ODJUG_Q&state=1407128838-071b44
+[04-Aug-2014 08:38:56 Africa/Johannesburg] OAuth client: Checking the authentication code
+[04-Aug-2014 08:38:56 Africa/Johannesburg] OAuth client: Accessing the OAuth access token at https://graph.facebook.com/oauth/access_token
+[04-Aug-2014 08:38:56 Africa/Johannesburg] Connecting to graph.facebook.com
+[04-Aug-2014 08:38:56 Africa/Johannesburg] Resolving HTTP server domain "graph.facebook.com"...
+[04-Aug-2014 08:38:56 Africa/Johannesburg] Connecting to HTTP server IP 66.220.158.19 port 443...
+[04-Aug-2014 08:38:57 Africa/Johannesburg] Connected to graph.facebook.com
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C POST /oauth/access_token HTTP/1.1
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C Host: graph.facebook.com
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C Accept: */*
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C Connection: Keep-Alive
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C Content-Type: application/x-www-form-urlencoded
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C Content-Length: 507
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C 
+[04-Aug-2014 08:38:57 Africa/Johannesburg] C code=AQA5bDO5PwUoQotNJ7PEpRyLyAXt0AgvKvfh_c0kkw7XcHv2Hbq9ZhqAg4Sz0rjNBSh2f4e91GEAdvzoiB3Iujs_InS7PkuwR8y8bYr6jD3npPCVmyw-UbzKFd_y8n-rz0i8Jkbs8kdNIeVwLXL_13PprvGxUhqDNM7lCOZvPczQ49aLbNgOWLNWuimyCC5HvfW4ljxbmv5WGEN71uPek4huW4jiRiC3bNgxoMuqs1Y5YiDEcg-SFUafE3b0EMonmQepi8pzG1LFz1vkGAZYnTwGQMXcYDLW-jIyvY-FVJPevBpvDiYWn8oWqXK0ODJUG_Q&client_id=323921167771204&client_secret=0f76d398edfd734bcbc62cd765e36bbe&redirect_uri=http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_facebook.php&grant_type=authorization_code
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S HTTP/1.1 400 Bad Request
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S WWW-Authenticate: OAuth "Facebook Platform" "invalid_code" "Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request"
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Facebook-API-Version: v1.0
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Content-Type: application/json; charset=UTF-8
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Pragma: no-cache
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Access-Control-Allow-Origin: *
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S X-FB-Rev: 1353801
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Cache-Control: no-store
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Expires: Sat, 01 Jan 2000 00:00:00 GMT
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S X-FB-Debug: 0Wsn8s+ZFjvbiiEa8znlgW/eVW07RnuGl/Vmm4CkQP+5OHSWkq2Be9Wjuq43OZvwlT04SiaScIn4DVq9IdooEQ==
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Date: Mon, 04 Aug 2014 06:38:58 GMT
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Connection: keep-alive
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S Content-Length: 190
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S 
+[04-Aug-2014 08:38:58 Africa/Johannesburg] S {"error":{"message":"Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request","type":"OAuthException","code":100}}
+[04-Aug-2014 08:38:58 Africa/Johannesburg] Keeping the connection alive to graph.facebook.com
+[04-Aug-2014 08:38:58 Africa/Johannesburg] OAuth client: Could not retrieve the OAuth access token. Error: it was not possible to access the OAuth access token: it was returned an unexpected response status 400 Response: {"error":{"message":"Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request","type":"OAuthException","code":100}}
+[06-Aug-2014 19:02:41 Africa/Johannesburg] OAuth client: Checking if OAuth access token was already retrieved from https://graph.facebook.com/oauth/access_token
+[06-Aug-2014 19:02:41 Africa/Johannesburg] OAuth client: Checking the authentication state in URI /login_with_facebook.php
+[06-Aug-2014 19:02:41 Africa/Johannesburg] OAuth client: Redirecting to OAuth Dialog https://www.facebook.com/dialog/oauth?client_id=323921167771204&redirect_uri=http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_facebook.php&scope=email&state=1407344561-ce2f98
+[06-Aug-2014 19:02:44 Africa/Johannesburg] OAuth client: Checking if OAuth access token was already retrieved from https://graph.facebook.com/oauth/access_token
+[06-Aug-2014 19:02:44 Africa/Johannesburg] OAuth client: Checking the authentication state in URI /login_with_facebook.php?code=AQClLToefGbNhIptayvZ8kaMrvpVadmR7BTzLYQqVP5sDeEMtoWrA2masIBUWoFG44UXx44yRpjaxw2mtnpP2gVvzgG34XfUNo60F6zEWHkWtgwmO9OAuT7F0Xdfk19icZmVhccCZhhii1Hcz6ur_NxRpReLPXZvY_rzo0ov-f3woN2R85YpIEIebfWyx1E4-qF5XrhQN84R73zu-uoC9lbrfalgYfoRU0KTE8iX9rzqrySbxMfuafGS-7g3tz5_Ef9uJ9Dd18tBqjf2FM4i43guAHffKH3bLVfgiJKuVPqpavGo6y3x2c3BGlnW8yfYXLU&state=1407344561-ce2f98
+[06-Aug-2014 19:02:44 Africa/Johannesburg] OAuth client: Checking the authentication code
+[06-Aug-2014 19:02:44 Africa/Johannesburg] OAuth client: Accessing the OAuth access token at https://graph.facebook.com/oauth/access_token
+[06-Aug-2014 19:02:44 Africa/Johannesburg] Connecting to graph.facebook.com
+[06-Aug-2014 19:02:44 Africa/Johannesburg] Resolving HTTP server domain "graph.facebook.com"...
+[06-Aug-2014 19:02:44 Africa/Johannesburg] Connecting to HTTP server IP 66.220.158.19 port 443...
+[06-Aug-2014 19:02:45 Africa/Johannesburg] Connected to graph.facebook.com
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C POST /oauth/access_token HTTP/1.1
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C Host: graph.facebook.com
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C User-Agent: PHP-OAuth-API (http://www.phpclasses.org/oauth-api $Revision: 1.74 $)
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C Accept: */*
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C Connection: Keep-Alive
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C Content-Type: application/x-www-form-urlencoded
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C Content-Length: 507
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C 
+[06-Aug-2014 19:02:45 Africa/Johannesburg] C code=AQClLToefGbNhIptayvZ8kaMrvpVadmR7BTzLYQqVP5sDeEMtoWrA2masIBUWoFG44UXx44yRpjaxw2mtnpP2gVvzgG34XfUNo60F6zEWHkWtgwmO9OAuT7F0Xdfk19icZmVhccCZhhii1Hcz6ur_NxRpReLPXZvY_rzo0ov-f3woN2R85YpIEIebfWyx1E4-qF5XrhQN84R73zu-uoC9lbrfalgYfoRU0KTE8iX9rzqrySbxMfuafGS-7g3tz5_Ef9uJ9Dd18tBqjf2FM4i43guAHffKH3bLVfgiJKuVPqpavGo6y3x2c3BGlnW8yfYXLU&client_id=323921167771204&client_secret=0f76d398edfd734bcbc62cd765e36bbe&redirect_uri=http%3A%2F%2Fgate.makerlabs.co.za%2F%2Flogin_with_facebook.php&grant_type=authorization_code
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S HTTP/1.1 400 Bad Request
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S WWW-Authenticate: OAuth "Facebook Platform" "invalid_code" "Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request"
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Facebook-API-Version: v1.0
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Content-Type: application/json; charset=UTF-8
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Pragma: no-cache
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Access-Control-Allow-Origin: *
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S X-FB-Rev: 1358837
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Cache-Control: no-store
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Expires: Sat, 01 Jan 2000 00:00:00 GMT
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S X-FB-Debug: TG4uO0keBhwJCwENim2DJ/WUVd0z/4a98LGO9onOcGi1mWRfhye04Q2BbpxtDPUN9rboX9qlU8IutjH8XzeAsg==
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Date: Wed, 06 Aug 2014 17:02:46 GMT
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Connection: keep-alive
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S Content-Length: 190
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S 
+[06-Aug-2014 19:02:46 Africa/Johannesburg] S {"error":{"message":"Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request","type":"OAuthException","code":100}}
+[06-Aug-2014 19:02:46 Africa/Johannesburg] Keeping the connection alive to graph.facebook.com
+[06-Aug-2014 19:02:46 Africa/Johannesburg] OAuth client: Could not retrieve the OAuth access token. Error: it was not possible to access the OAuth access token: it was returned an unexpected response status 400 Response: {"error":{"message":"Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request","type":"OAuthException","code":100}}
+[10-Aug-2014 22:05:22 Africa/Johannesburg] PHP Fatal error:  Class 'Logs' not found in /home/makerlab/public_html/gate/log.php on line 21
+[10-Aug-2014 22:06:39 Africa/Johannesburg] PHP Fatal error:  Class 'Logs' not found in /home/makerlab/public_html/gate/log.php on line 21
+[10-Aug-2014 22:06:47 Africa/Johannesburg] PHP Fatal error:  Class 'Logs' not found in /home/makerlab/public_html/gate/log.php on line 21
+[10-Aug-2014 22:07:00 Africa/Johannesburg] PHP Fatal error:  Class 'Logs' not found in /home/makerlab/public_html/gate/log.php on line 21
+[10-Aug-2014 22:07:11 Africa/Johannesburg] PHP Fatal error:  Class 'Logs' not found in /home/makerlab/public_html/gate/log.php on line 21
+[10-Aug-2014 22:07:44 Africa/Johannesburg] PHP Fatal error:  Class 'Logs' not found in /home/makerlab/public_html/gate/log.php on line 21
+[10-Aug-2014 22:08:02 Africa/Johannesburg] PHP Fatal error:  Class 'AccessLogs' not found in /home/makerlab/public_html/gate/log.php on line 21
+[10-Aug-2014 22:08:29 Africa/Johannesburg] PHP Fatal error:  Uncaught  --> Smarty: Unable to load template file 'log.tpl' <-- 
+  thrown in /home/makerlab/public_html/gate/lib/Smarty/libs/sysplugins/smarty_internal_templatebase.php on line 127
+[11-Aug-2014 07:43:00 Africa/Johannesburg] PHP Warning:  require(TimeSlot.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/test.php on line 5
+[11-Aug-2014 07:43:00 Africa/Johannesburg] PHP Warning:  require(TimeSlot.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/makerlab/public_html/gate/test.php on line 5
+[11-Aug-2014 07:43:00 Africa/Johannesburg] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'TimeSlot.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/makerlab/public_html/gate/test.php on line 5
+[13-Aug-2014 18:20:56 Africa/Johannesburg] PHP Warning:  Missing argument 8 for User::create(), called in /home/makerlab/public_html/gate/login_with_google.php on line 65 and defined in /home/makerlab/public_html/gate/lib/User.php on line 24
+[13-Aug-2014 18:20:56 Africa/Johannesburg] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/makerlab/public_html/gate/lib/User.php:24) in /home/makerlab/public_html/gate/login_with_google.php on line 69
+[14-Aug-2014 09:55:08 Africa/Johannesburg] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/makerlab/public_html/gate/lib/User.php on line 39
+[14-Aug-2014 09:55:09 Africa/Johannesburg] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/makerlab/public_html/gate/lib/User.php on line 39
+[14-Aug-2014 09:55:10 Africa/Johannesburg] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/makerlab/public_html/gate/lib/User.php on line 39
+[14-Aug-2014 09:55:12 Africa/Johannesburg] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/makerlab/public_html/gate/lib/User.php on line 39
+[14-Aug-2014 11:06:16 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:19 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:24 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:25 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:26 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:26 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:26 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:33 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:33 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:33 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:34 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:34 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
+[14-Aug-2014 11:06:34 Africa/Johannesburg] PHP Catchable fatal error:  Object of class Bootstrap could not be converted to string in /home/makerlab/public_html/gate/Bootstrap.php on line 47
