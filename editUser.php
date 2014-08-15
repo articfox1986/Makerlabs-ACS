@@ -7,13 +7,13 @@ $bootstrap = new Bootstrap();
 
 Session::init();
 if (($id = Session::get('id')) == null) {
-    header("Location: http://gate.makerlabs.co.za/index.php?noaccess");
+    header("Location: " . PATH . "login.php?noaccess");
     die();
 } else {
     $userObj = new User($bootstrap->db);
     $result = $userObj->load($id);
     if (!$result) {
-        header("Location: http://gate.makerlabs.co.za/index.php?noaccess");
+        header("Location: " . PATH . "login.php?noaccess");
         die();
     }
 }
@@ -50,8 +50,6 @@ if (isset($_POST['accessLevel'])) {
 	}
 	$userObj->setEnable($verify);
 	$userObj->save();
-	//header("Location: http://gate.makerlabs.co.za/admin.php");
-        //die();
 }
 
 $isAdmin = ($userObj->getAccessLevel() > 1) ? 1 : 0;
@@ -65,6 +63,6 @@ $bootstrap->smarty->assign('header', $header);
 $bootstrap->smarty->assign('nav', $nav);
 $bootstrap->smarty->assign('footer', $footer);
 $bootstrap->smarty->assign('test', $test);
-$bootstrap->smarty->assign('url', "http://gate.makerlabs.co.za/editUser.php?id={$_GET['id']}");
+$bootstrap->smarty->assign('url', PATH."editUser.php?id={$_GET['id']}");
 $bootstrap->smarty->assign('user', $user);
 $bootstrap->smarty->display('edit_user.tpl');
