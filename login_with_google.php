@@ -66,7 +66,7 @@ if (Session::get('id') == null) {
             $userObj->save();
         }
         Session::set('id', $userObj->getId());
-        header("Location: http://gate.makerlabs.co.za/test.php");
+        header("Location: ".PATH);
         die();
         ?>
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">

@@ -43,11 +43,5 @@
 
                 <!--<button type="submit" class="btn btn-positive btn-block">Save</button>-->
             </form>
-            <script type="text/javascript">
-                function submitform()
-                {
-                    document.editForm.submit();
-                }
-            </script>     
         </div>
                 {$footer}

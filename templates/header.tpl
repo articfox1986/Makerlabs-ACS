@@ -18,5 +18,6 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <!-- Include the compiled Ratchet JS -->
         <script src="./lib/js/ratchet.js"></script>
+        <script src="./lib/js/makerlab.js" type="text/javascript"></script>
     </head>
         <body>
