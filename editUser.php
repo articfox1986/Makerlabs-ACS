@@ -18,28 +18,28 @@ if (($id = Session::get('id')) == null) {
     }
 }
 if (isset($_GET['id'])) {
-    $userObj = new User($bootstrap->db);
-    $result = $userObj->load($_GET['id']);
+    $userObj2 = new User($bootstrap->db);
+    $result = $userObj2->load($_GET['id']);
     if ($result) {
-        $user = $userObj->asArray();
+        $user = $userObj2->asArray();
     }
 }
 $test = '';
 if (isset($_POST['name'])) {
     $name = $_POST['name'];
 	$user['name'] = $name;
-	$userObj->setName($name);
+	$userObj2->setName($name);
 }
 if (isset($_POST['password'])) {
     $password = $_POST['password'];
 	$user['password'] = $password;
-	$userObj->setPassword($password);
+	$userObj2->setPassword($password);
 }
 
 if (isset($_POST['accessLevel'])) {
     $accessLevel = $_POST['accessLevel'];
 	$user['accessLevel'] = $accessLevel;
-	$userObj->setAccessLevel($accessLevel);
+	$userObj2->setAccessLevel($accessLevel);
 	
 	if (isset($_POST['enable'])) {
     $verify = $_POST['enable'];
@@ -48,8 +48,10 @@ if (isset($_POST['accessLevel'])) {
 		$user['enable'] = 0;
 		$verify = 0;
 	}
-	$userObj->setEnable($verify);
-	$userObj->save();
+	$userObj2->setEnable($verify);
+	$userObj2->save();
+        header("Location: " . PATH . "users.php");
+    die();
 }
 
 $isAdmin = ($userObj->getAccessLevel() > 1) ? 1 : 0;
