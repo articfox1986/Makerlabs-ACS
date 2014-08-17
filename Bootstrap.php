@@ -41,13 +41,13 @@ class Bootstrap {
     public function initSession() {
         Session::init();
         if (($id = Session::get('id')) == null) {
-            header("Location: " . PATH . "index.php?noaccess");
+            header("Location: " . PATH . "login.php?noaccess");
             die();
         } else {
-            $$this->userObj = new User($this->db);
-            $result = $$this->userObj->load($id);
+            $this->userObj = new User($this->db);
+            $result = $this->userObj->load($id);
             if (!$result) {
-                header("Location: " . PATH . "index.php?noaccess");
+                header("Location: " . PATH . "login.php?noaccess");
                 die();
             }
         }

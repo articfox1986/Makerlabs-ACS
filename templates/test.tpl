@@ -1,10 +1,9 @@
-{$header}
-
+{include file="header.tpl"}
         <!-- Make sure all your bars are the first things in your <body> -->
         <header class="bar bar-nav">
             <h1 class="title">MakerLabs Access Control</h1>
         </header>
-        {$nav}
+        {include file="menu.tpl" isAdmin=$isAdmin menuSelected=$menuSelected}
         <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
         <div class="content">
             <FORM METHOD=POST enctype="multipart/form-data" ACTION="{$url}">
@@ -27,4 +26,4 @@
   </div>
 </div>
         </div>
-{$footer}
+{include file="footer.tpl"}

@@ -5,6 +5,7 @@ require 'Bootstrap.php';
 $bootstrap = new Bootstrap();
 if ($_REQUEST['action'] == 'logout') {
     //echo 1;
+    Session::init();
     Session::destroy();
     //header("Location: http://gate.makerlabs.co.za/index.php?logout");
     //die();

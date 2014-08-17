@@ -1,5 +1,5 @@
 <nav class="bar bar-tab">
-    <a class="tab-item {if $menuSelected == 'home'}active{/if}" href="index.php">
+    <a class="tab-item {if $menuSelected == 'home'}active{/if}" href="index.php" data-transition="slide-in">
         <span class="icon icon-home"></span>
         <span class="tab-label">Home</span>
     </a>
