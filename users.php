@@ -5,7 +5,7 @@ require ('./lib/Users.php');
 require 'Bootstrap.php';
 
 $bootstrap = new Bootstrap();
-$bootstrap->initSession();
+$bootstrap->initSession(2);
 
 $isAdmin = ($bootstrap->userObj->getAccessLevel() > 1) ? 1 : 0;
 

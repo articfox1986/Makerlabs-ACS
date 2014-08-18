@@ -11,7 +11,7 @@
                 {foreach from=$users item=user}
                     <li class="table-view-cell">
                         <a class="navigate-right" href="editUser.php?id={$user['id']}" data-transition="slide-in">
-                            <span class="badge">{if $user['enable'] == 1}Verified{else}Unverified{/if}</span>
+                            <span class="badge">{$user['accessType']}</span>
                             {$user['name']}
                         </a>
                     </li>

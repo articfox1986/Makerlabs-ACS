@@ -22,13 +22,6 @@
             <input type="text" name="password" value="{$user['password']}">
         </div>
         <div class="input-row">
-            <label>Verified</label>
-            <!--<div class="toggle-handle {if $user['enable'] == 1}active{/if}">-->
-            <input type="checkbox" name="enable" value="1" {if $user['enable'] == 1}checked="checked"{/if}>
-            <!--<div class="toggle-handle"></div>
-        </div>-->
-        </div>
-        <div class="input-row">
             <label>Type</label>
             <select name="accessLevel">
                 <option value="0"{if $user['accessLevel'] eq 0} selected=selected{/if}>Pending</option>

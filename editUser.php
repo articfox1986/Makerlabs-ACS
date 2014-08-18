@@ -4,13 +4,17 @@ require 'config/database.php';
 require 'Bootstrap.php';
 
 $bootstrap = new Bootstrap();
-$bootstrap->initSession();
+$bootstrap->initSession(2);
 
 if (isset($_GET['id'])) {
     $userObj2 = new User($bootstrap->db);
     $result = $userObj2->load($_GET['id']);
     if ($result) {
         $user = $userObj2->asArray();
+        if ($userObj2->getAccessLevel() > $bootstrap->userObj->getAccessLevel()) {
+            header("Location: " . PATH . "index.php?nopermission");
+                die();
+        }
     }
 }
 if (isset($_POST['name'])) {
@@ -29,14 +33,6 @@ if (isset($_POST['accessLevel'])) {
     $user['accessLevel'] = $accessLevel;
     $userObj2->setAccessLevel($accessLevel);
 
-    if (isset($_POST['enable'])) {
-        $verify = $_POST['enable'];
-        $user['enable'] = $verify;
-    } else {
-        $user['enable'] = 0;
-        $verify = 0;
-    }
-    $userObj2->setEnable($verify);
     $userObj2->save();
     header("Location: " . PATH . "users.php");
     die();

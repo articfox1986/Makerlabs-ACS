@@ -8,9 +8,9 @@
             <span class="icon icon-gear"></span>
             <span class="tab-label">Users</span>
         </a>
-        <a class="tab-item {if $menuSelected == 'logs'}active{/if}" href="logs.php"  data-transition="slide-in">
+        <a class="tab-item {if $menuSelected == 'admin'}active{/if}" href="admin.php"  data-transition="slide-in">
             <span class="icon icon-search"></span>
-            <span class="tab-label">Logs</span>
+            <span class="tab-label">Admin</span>
         </a>
     {/if}
     <a class="tab-item" href="login.php?action=logout">

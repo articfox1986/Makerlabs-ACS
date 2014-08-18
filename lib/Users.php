@@ -47,6 +47,20 @@ class Users {
                 $user['type'] = $row['type'];
                 $user['enable'] = $row['enable'];
                 $user['date'] = $row['date'];
+                switch ($row['access_level']) {
+                    case 3:
+                        $user['accessType'] = 'Super User';
+                        break;
+                    case 2:
+                        $user['accessType'] = 'Admin';
+                        break;
+                    case 1:
+                        $user['accessType'] = 'User';
+                        break;
+                    default:
+                        $user['accessType'] = 'Pending';
+                        break;
+                }
                 $user['accessLevel'] = $row['access_level'];
                 $this->results[] = $user;
             }

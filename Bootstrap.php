@@ -38,7 +38,7 @@ class Bootstrap {
         $this->db = new Database();
     }
 
-    public function initSession() {
+    public function initSession($accessLevel = 0) {
         Session::init();
         if (($id = Session::get('id')) == null) {
             header("Location: " . PATH . "login.php?noaccess");
@@ -48,6 +48,10 @@ class Bootstrap {
             $result = $this->userObj->load($id);
             if (!$result) {
                 header("Location: " . PATH . "login.php?noaccess");
+                die();
+            }
+            if ($accessLevel > $this->userObj->getAccessLevel()) {
+                header("Location: " . PATH . "index.php?nopermission");
                 die();
             }
         }

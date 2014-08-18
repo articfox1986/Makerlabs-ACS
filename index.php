@@ -7,41 +7,36 @@ require 'lib/TimeSlot.php';
 try {
     $bootstrap = new Bootstrap();
     $bootstrap->initSession();
-    
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //level from the form post
-        //if ($bootstrap->userObj->)
-        $level = $_POST["level"];
+        if ($bootstrap->userObj->getAccessLevel() > 0) {
+            $level = $_POST["level"];
 
-        $my_access_token = ACCESS_TOKEN;
-        $my_device = DEVICE_ID;
-        $output_pin = "r1";
+            $my_access_token = ACCESS_TOKEN;
+            $my_device = DEVICE_ID;
+            $output_pin = "r1";
 
-        $url = SPARK_PATH . $my_device . "/relay2";
-        $fields = array();
-        $fields['access_token'] = $my_access_token;
-        //$fields['args'] = $output_pin . "," . $level;
-        $fields['args'] = "r2,HIGH";
-        $accessLogObj = new AccessLog($bootstrap->db);
-        $service = json_decode(Tools::curl_download($url, $fields));
-        if (is_null($service)) {
-            //echo "CoRe not ReSpOnDinG!";
-            $message = "Onsite device not responding";
-            //$accessLogObj->create(null, "Onsite device not responding", $bootstrap->userObj->getId(), time());
-        } else {
-            //var_dump($service);
-            if ($service->return_value == 1) {
-                //echo "Open Sesame";
-                $message = "Opened Gate";
-                //$accessLogObj->create(null, "Opened Gate", $bootstrap->userObj->getId(), time());
+            $url = SPARK_PATH . $my_device . "/relay2";
+            $fields = array();
+            $fields['access_token'] = $my_access_token;
+            //$fields['args'] = $output_pin . "," . $level;
+            $fields['args'] = "r2,HIGH";
+            $accessLogObj = new AccessLog($bootstrap->db);
+            $service = json_decode(Tools::curl_download($url, $fields));
+            if (is_null($service)) {
+                $message = "Onsite device not responding";
             } else {
-                //echo "something aint right";
-                $message = "Failed to Open";
-                //$accessLogObj->create(null, "Failed to Open", $bootstrap->userObj->getId(), time());
+                //var_dump($service);
+                if ($service->return_value == 1) {
+                    $message = "Opened Gate";
+                } else {
+                    $message = "Failed to Open";
+                }
             }
+            $accessLogObj->create(null, $message, $bootstrap->userObj->getId(), time());
+            $accessLogObj->save();
         }
-        $accessLogObj->create(null, $message, $bootstrap->userObj->getId(), time());
-        $accessLogObj->save();
     }
     // Check time slots
     $timeSlotObj = new TimeSlot($bootstrap->db);
@@ -52,9 +47,10 @@ try {
     }
     $isAdmin = ($bootstrap->userObj->getAccessLevel() > 1) ? 1 : 0;
     $bootstrap->smarty->assign('isAdmin', $isAdmin);
+    $bootstrap->smarty->assign('accessLevel', $bootstrap->userObj->getAccessLevel());
     $bootstrap->smarty->assign('menuSelected', 'home');
-    
-    $bootstrap->smarty->assign('url', PATH."index.php");
+
+    $bootstrap->smarty->assign('url', PATH . "index.php");
     $bootstrap->smarty->display('test.tpl');
 } catch (SmartyException $e) {
     echo 'Templating engine problem';

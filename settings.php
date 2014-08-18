@@ -1,7 +1,8 @@
 <?php
 
 require 'config/database.php';
-require ('./lib/AccessLogs.php');
+require ('./lib/Setting.php');
+require ('./lib/Settings.php');
 require 'Bootstrap.php';
 
 $bootstrap = new Bootstrap();
@@ -11,7 +12,7 @@ $isAdmin = ($bootstrap->userObj->getAccessLevel() > 1) ? 1 : 0;
 $bootstrap->smarty->assign('isAdmin', $isAdmin);
 $bootstrap->smarty->assign('menuSelected', 'logs');
 
-$logsObj = new AccessLogs($bootstrap->db);
-$logs = $logsObj->loadAsArray(0);
-$bootstrap->smarty->assign('logs', $logs);
-$bootstrap->smarty->display('logs.tpl');
+$settingsObj = new Settings($bootstrap->db);
+$settings = $settingsObj->loadAsArray(0);
+$bootstrap->smarty->assign('settings', $settings);
+$bootstrap->smarty->display('settings.tpl');
