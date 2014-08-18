@@ -19,5 +19,6 @@
         <!-- Include the compiled Ratchet JS -->
         <script src="./lib/js/ratchet.js"></script>
         <script src="./lib/js/makerlab.js" type="text/javascript"></script>
+        <script src="../lib/js/jquery-2.1.1.min.js" type="text/javascript"></script>
     </head>
         <body>

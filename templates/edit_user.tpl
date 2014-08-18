@@ -31,6 +31,7 @@
         <div class="input-row">
             <label>Type</label>
             <select name="accessLevel">
+                <option value="0"{if $user['accessLevel'] eq 0} selected=selected{/if}>Pending</option>
                 <option value="1"{if $user['accessLevel'] eq 1} selected=selected{/if}>User</option>
                 <option value="2"{if $user['accessLevel'] eq 2} selected=selected{/if}>Admin</option>
                 <option value="3"{if $user['accessLevel'] eq 3} selected=selected{/if}>Super User</option>

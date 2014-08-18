@@ -4,13 +4,11 @@ require 'config/database.php';
 require 'Bootstrap.php';
 require 'lib/TimeSlot.php';
 
-try {
     $bootstrap = new Bootstrap();
     $bootstrap->initSession();
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //level from the form post
-        //if ($bootstrap->userObj->)
         $level = $_POST["level"];
 
         $my_access_token = ACCESS_TOKEN;
@@ -26,21 +24,21 @@ try {
         $service = json_decode(Tools::curl_download($url, $fields));
         if (is_null($service)) {
             //echo "CoRe not ReSpOnDinG!";
-            $message = "Onsite device not responding";
-            //$accessLogObj->create(null, "Onsite device not responding", $bootstrap->userObj->getId(), time());
+            $accessLogObj->create(null, "Onsite device not responding", $bootstrap->userObj->getId(), time());
+			echo 0;
         } else {
             //var_dump($service);
             if ($service->return_value == 1) {
                 //echo "Open Sesame";
-                $message = "Opened Gate";
-                //$accessLogObj->create(null, "Opened Gate", $bootstrap->userObj->getId(), time());
+
+                $accessLogObj->create(null, "Opened Gate", $bootstrap->userObj->getId(), time());
+				echo 1;
             } else {
                 //echo "something aint right";
-                $message = "Failed to Open";
-                //$accessLogObj->create(null, "Failed to Open", $bootstrap->userObj->getId(), time());
+                $accessLogObj->create(null, "Failed to Open", $bootstrap->userObj->getId(), time());
+				echo 2;
             }
         }
-        $accessLogObj->create(null, $message, $bootstrap->userObj->getId(), time());
         $accessLogObj->save();
     }
     // Check time slots
@@ -51,12 +49,3 @@ try {
         //echo "<br />Its not time!<br />";
     }
     $isAdmin = ($bootstrap->userObj->getAccessLevel() > 1) ? 1 : 0;
-    $bootstrap->smarty->assign('isAdmin', $isAdmin);
-    $bootstrap->smarty->assign('menuSelected', 'home');
-    
-    $bootstrap->smarty->assign('url', PATH."index.php");
-    $bootstrap->smarty->display('test.tpl');
-} catch (SmartyException $e) {
-    echo 'Templating engine problem';
-    die();
-}

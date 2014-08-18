@@ -11,4 +11,4 @@ if ($_REQUEST['action'] == 'logout') {
     //die();
 }
 //$bootstrap->smarty->assign('url', htmlspecialchars($_SERVER["PHP_SELF"]));
-$bootstrap->smarty->display('index.tpl');
+$bootstrap->smarty->display('login.tpl');

@@ -39,13 +39,13 @@ class AccessLogs {
     function loadAsArray($accessLevel) {
 
         try {
-            $statement = $this->db->query("SELECT * FROM `access_log`, `user` u WHERE user_id = u.id ORDER BY access_log.`date` DESC LIMIT 50");
+            $statement = $this->db->query("SELECT `access_log`.id, `access_log`.description, `access_log`.user_id, name, `access_log`.date FROM `access_log`, `user` u WHERE user_id = u.id ORDER BY access_log.`date` DESC LIMIT 50");
             while (($row = $statement->fetch()) != false) {
                 $user = array();
                 $user['id'] = $row['id'];
                 $user['description'] = $row['description'];
                 $user['userId'] = $row['user_id'];
-				$user['name'] = $row['name'];
+                $user['name'] = $row['name'];
                 $user['date'] = date("Y-m-d H:i:s", $row['date']);
                 $this->results[] = $user;
             }

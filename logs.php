@@ -14,4 +14,4 @@ $bootstrap->smarty->assign('menuSelected', 'logs');
 $logsObj = new AccessLogs($bootstrap->db);
 $logs = $logsObj->loadAsArray(0);
 $bootstrap->smarty->assign('logs', $logs);
-$bootstrap->smarty->display('log.tpl');
+$bootstrap->smarty->display('logs.tpl');

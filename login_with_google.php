@@ -62,7 +62,7 @@ if (Session::get('id') == null) {
         $userObj = new User($bootstrap->db);
         $result = $userObj->loadByEmail($user->email);
         if (!$result) {
-            $userObj->create(null, $user->name, $user->email, $password, 'google', 0, time());
+            $userObj->create(null, $user->name, $user->email, $password, 'google', 0, time(), 0);
             $userObj->save();
         }
         Session::set('id', $userObj->getId());
@@ -101,11 +101,11 @@ if (Session::get('id') == null) {
     $userObj = new User($bootstrap->db);
     $result = $userObj->load(Session::get('id'));
     if ($result) {
-        header("Location: http://gate.makerlabs.co.za/test.php");
+        header("Location: http://gate.makerlabs.co.za/index.php");
         die();
     } else {
         Session::destroy();
-        header("Location: http://gate.makerlabs.co.za/index.php");
+        header("Location: http://gate.makerlabs.co.za/login.php");
         die();
     }
 }

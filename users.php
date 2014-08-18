@@ -15,4 +15,4 @@ $bootstrap->smarty->assign('menuSelected', 'users');
 $usersObj = new Users($bootstrap->db);
 $users = $usersObj->loadAsArray($bootstrap->userObj->getAccessLevel());
 $bootstrap->smarty->assign('users', $users);
-$bootstrap->smarty->display('admin.tpl');
+$bootstrap->smarty->display('users.tpl');

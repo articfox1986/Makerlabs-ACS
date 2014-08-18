@@ -14,7 +14,8 @@
                 <!--<input type="Submit" name="Submit" value="Open" style="width:60px;height:30px;">-->
                 <button class="btn btn-positive btn-block" type="submit">Open Gate</button>
             </form>
-                <a href="#myModalexample"><button class="btn btn-negative btn-block" type="submit">Open Model</button></a>
+                <a href="javascript: ajaxCall()"><button class="btn btn-negative btn-block">Test Ajax</button></a>
+                <a href="#myModalexample"><button class="btn btn-negative btn-block">Open Model</button></a>
 <div id="myModalexample" class="modal">
   <header class="bar bar-nav">
     <a class="icon icon-close pull-right" href="#myModalexample"></a>
@@ -22,7 +23,7 @@
   </header>
 
   <div class="content">
-    <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    <p class="content-padded" id="modelContent">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
   </div>
 </div>
         </div>
