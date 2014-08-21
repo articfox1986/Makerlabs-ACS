@@ -21,7 +21,7 @@ try {
             $fields = array();
             $fields['access_token'] = $my_access_token;
             //$fields['args'] = $output_pin . "," . $level;
-            $fields['args'] = "r2,HIGH";
+            $fields['args'] = "r1,HIGH";
             $accessLogObj = new AccessLog($bootstrap->db);
             $service = json_decode(Tools::curl_download($url, $fields));
             if (is_null($service)) {

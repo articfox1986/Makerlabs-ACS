@@ -924,6 +924,22 @@ select {
   line-height: 1.1;
 }
 
+.input-row2 label {
+  float: left;
+  width: 60%;
+  padding: 8px 15px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.1;
+}
+
+.input-row2 input {
+  float: right;
+  width: 40%;
+  padding-left: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
 .input-row input {
   float: right;
   width: 65%;

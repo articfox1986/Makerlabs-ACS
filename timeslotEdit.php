@@ -43,5 +43,5 @@ $bootstrap->smarty->assign('isAdmin', $isAdmin);
 $bootstrap->smarty->assign('menuSelected', 'users');
 
 $bootstrap->smarty->assign('url', PATH . "timeslotEdit.php?day={$_GET['day']}");
-$bootstrap->smarty->assign('user', $user);
+$bootstrap->smarty->assign('timeslot', $user);
 $bootstrap->smarty->display('timeslot_edit.tpl');
