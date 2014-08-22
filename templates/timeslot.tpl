@@ -9,25 +9,25 @@
             <div class="card">
             <ul class="table-view">
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="timeslotEdit.php?day=monday" data-transition="slide-in">Monday</a>
+                        <a class="navigate-right" href="timeslotEdit.php?day=Monday" data-transition="slide-in">Monday</a>
                     </li>
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="timeslotEdit.php?day=tuesday" data-transition="slide-in">Tuesday</a>
+                        <a class="navigate-right" href="timeslotEdit.php?day=Tuesday" data-transition="slide-in">Tuesday</a>
                     </li>
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="timeslotEdit.php?day=wednesday" data-transition="slide-in">Wednesday</a>
+                        <a class="navigate-right" href="timeslotEdit.php?day=Wednesday" data-transition="slide-in">Wednesday</a>
                     </li>
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="timeslotEdit.php?day=thursday" data-transition="slide-in">Thursday</a>
+                        <a class="navigate-right" href="timeslotEdit.php?day=Thursday" data-transition="slide-in">Thursday</a>
                     </li>
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="timeslotEdit.php?day=friday" data-transition="slide-in">Friday</a>
+                        <a class="navigate-right" href="timeslotEdit.php?day=Friday" data-transition="slide-in">Friday</a>
                     </li>
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="timeslotEdit.php?day=saturday" data-transition="slide-in">Saturday</a>
+                        <a class="navigate-right" href="timeslotEdit.php?day=Saturday" data-transition="slide-in">Saturday</a>
                     </li>
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="timeslotEdit.php?day=sunday" data-transition="slide-in">Sunday</a>
+                        <a class="navigate-right" href="timeslotEdit.php?day=Sunday" data-transition="slide-in">Sunday</a>
                     </li>
             </ul>
             </div>

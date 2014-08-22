@@ -9,7 +9,7 @@ class TimeSlot {
     private $db;
     private $id;
     private $day;
-    private $startTme;
+    private $startTime;
     private $endTime;
     private $isActive;
     private $recurring;
@@ -53,8 +53,8 @@ class TimeSlot {
 
     function save() {
         try {
-            $statement = $this->db->prepare("INSERT INTO `time_slot` (`day`, `start_time`, `end_time`, `is_active`, `recurring`) VALUES (:day, :starttime, :endtime, :isactive, :recurring) ON DUPLICATE KEY UPDATE `day` = :day, `start_time` = :starttime, `end_time` = :endtime, `isactive` = :isactive, `recurring` = :recurring");
-            $statement->execute(array(':day' => $this->day, ':starttime' => $this->startTme, ':endtime' => $this->endTime, ':isactive' => $this->isActive, ':recurring' => $this->recurring));
+            $statement = $this->db->prepare("INSERT INTO `time_slot` (`day`, `start_time`, `end_time`, `is_active`, `recurring`) VALUES (:day, :starttime, :endtime, :isactive, :recurring) ON DUPLICATE KEY UPDATE `day` = :day, `start_time` = :starttime, `end_time` = :endtime, `is_active` = :isactive, `recurring` = :recurring");
+            $statement->execute(array(':day' => $this->day, ':starttime' => $this->startTime, ':endtime' => $this->endTime, ':isactive' => $this->isActive, ':recurring' => $this->recurring));
             $this->id = $this->db->lastInsertId();
             return true;
         } catch (PDOException $e) {
@@ -96,7 +96,7 @@ class TimeSlot {
     }
     
     function getStartTime() {
-        return $this->startTme;
+        return $this->startTime;
     }
     
     function getEndTime() {
@@ -116,7 +116,7 @@ class TimeSlot {
     }
     
     function setStartTime($startTime) {
-        $this->startTme = $startTime;
+        $this->startTime = $startTime;
     }
     
     function setEndTime($endTime) {

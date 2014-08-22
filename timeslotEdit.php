@@ -1,47 +1,56 @@
 <?php
 
 require 'config/database.php';
+require ('./lib/TimeSlots.php');
+require ('./lib/TimeSlot.php');
 require 'Bootstrap.php';
 
 $bootstrap = new Bootstrap();
 $bootstrap->initSession(2);
 
-if (isset($_GET['id'])) {
-    $userObj2 = new User($bootstrap->db);
-    $result = $userObj2->load($_GET['id']);
-    if ($result) {
-        $user = $userObj2->asArray();
-        if ($userObj2->getAccessLevel() > $bootstrap->userObj->getAccessLevel()) {
-            header("Location: " . PATH . "index.php?nopermission");
-                die();
-        }
+$values = array();
+if (isset($_GET['day'])) {
+    $timeslotsObj = new TimeSlots($bootstrap->db);
+    $timeslots = $timeslotsObj->load($_GET['day']);
+    if (!$result) {
+        // error handling
     }
-}
-if (isset($_POST['name'])) {
-    $name = $_POST['name'];
-    $user['name'] = $name;
-    $userObj2->setName($name);
-}
-if (isset($_POST['password'])) {
-    $password = $_POST['password'];
-    $user['password'] = $password;
-    $userObj2->setPassword($password);
+    /*for ($i = 0; $i < 24; $i++) {
+        if (isset($_POST[$i])) {
+            $values[$i] = $_POST[$i];
+            //$timeslots[$i] = $_POST[$i];
+            //$userObj2->setName($name);
+        }
+    }*/
+    //var_dump($timeslots);
+    foreach ($timeslots as $ts) {
+        $values[$ts->getStartTime()] = (int) $ts->getIsActive();
+    }
+    //var_dump($values);
+    //die();
 }
 
-if (isset($_POST['accessLevel'])) {
-    $accessLevel = $_POST['accessLevel'];
-    $user['accessLevel'] = $accessLevel;
-    $userObj2->setAccessLevel($accessLevel);
 
-    $userObj2->save();
-    header("Location: " . PATH . "users.php");
+
+if (isset($_POST['submitted'])) {
+    foreach ($timeslots as $ts) {
+        if (isset($_POST[$ts->getStartTime()])) {
+            $ts->setIsActive($_POST[$ts->getStartTime()]);
+        } else {
+            $ts->setIsActive(0);
+        }
+        $ts->save();
+        //var_dump($ts->getStartTime());
+        $values[$ts->getStartTime()] = (int) $ts->getIsActive();
+    }
+    header("Location: " . PATH . "timeslots.php");
     die();
 }
 
 $isAdmin = ($bootstrap->userObj->getAccessLevel() > 1) ? 1 : 0;
 $bootstrap->smarty->assign('isAdmin', $isAdmin);
-$bootstrap->smarty->assign('menuSelected', 'users');
+$bootstrap->smarty->assign('menuSelected', 'admin');
 
 $bootstrap->smarty->assign('url', PATH . "timeslotEdit.php?day={$_GET['day']}");
-$bootstrap->smarty->assign('timeslot', $user);
+$bootstrap->smarty->assign('timeslots', $values);
 $bootstrap->smarty->display('timeslot_edit.tpl');
