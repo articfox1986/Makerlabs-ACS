@@ -12,7 +12,7 @@
         {foreach from=$settings item=setting}
                 <div class="input-row">
                     <label>{$setting['name']}</label>
-                    <input type="text" name="name" value="{$setting['value']}">
+                    <input type="text" name="{$setting['name']}" value="{$setting['value']}">
                 </div>
                 
             {/foreach}
