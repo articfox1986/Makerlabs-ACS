@@ -10,7 +10,7 @@ define('API_DB_PASS', '*******');
 define("ACCESS_TOKEN", '*****');
 define("DEVICE_ID", 'Relay');
 define("PATH", 'gate.makerlabs.co.za');
-define("SPARK_PATH", 'https://api.spark.io/v1/devices/');
+define("SPARK_PATH", 'https://api.spark.io/v1/');
 define("GOOGLE_CLIENT_ID", '*******');
 define("GOOGLE_CLIENT_SECRET", '********');
 

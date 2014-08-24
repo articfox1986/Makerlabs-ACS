@@ -17,7 +17,7 @@ try {
             $my_device = DEVICE_ID;
             $output_pin = "r1";
 
-            $url = SPARK_PATH . $my_device . "/relay2";
+            $url = SPARK_PATH ."devices/". $my_device . "/relay2";
             $fields = array();
             $fields['access_token'] = $my_access_token;
             //$fields['args'] = $output_pin . "," . $level;
