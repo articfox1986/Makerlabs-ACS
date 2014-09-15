@@ -9,6 +9,7 @@ class SparkToken {
     private $db;
     private $id;
     private $token;
+    private $expiryDate;
     private $isEnabled;
 
     function __construct($db) {
@@ -16,9 +17,10 @@ class SparkToken {
         $this->db = $db;
     }
     
-    function create($id, $token, $isEnabled) {
+    function create($id, $token, $expiryDate, $isEnabled) {
         $this->id = $id;
         $this->token = $token;
+        $this->expiryDate = $expiryDate;
         $this->isEnabled = $isEnabled;
     }
     
@@ -30,6 +32,27 @@ class SparkToken {
             if (($row = $statement->fetch()) != false) {
                 $this->id = $row['id'];
                 $this->token = $row['token'];
+                $this->expiryDate = $row['expiry_date'];
+                $this->isEnabled = $row['is_enabled'];
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            //ErrorLog::log($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, $this->code, $e->getLine());
+            return false;
+        }
+    }
+
+    function loadLatest() {
+        try {
+            $statement = $this->db->prepare("SELECT * FROM `spark_token` WHERE 1 ORDER BY expiry_date DESC LIMIT 1");
+            $statement->execute(array(':id' => $this->id));
+            if (($row = $statement->fetch()) != false) {
+                $this->id = $row['id'];
+                $this->token = $row['token'];
+                $this->expiryDate = $row['expiry_date'];
                 $this->isEnabled = $row['is_enabled'];
                 return true;
             } else {
@@ -44,8 +67,8 @@ class SparkToken {
 
     function save() {
         try {
-            $statement = $this->db->prepare("INSERT INTO `spark_token` (`token`, `is_enabled`) VALUES (:token, :isenabled) ON DUPLICATE KEY UPDATE `token` = :token, `is_enabled` = :isenabled");
-            $statement->execute(array(':token' => $this->token, ':isenabled' => $this->isEnabled));
+            $statement = $this->db->prepare("INSERT INTO `spark_token` (`token`, `expiry_date`, `is_enabled`) VALUES (:token, :expirydate, :isenabled) ON DUPLICATE KEY UPDATE `token` = :token, `expiry_date` = :expirydate, `is_enabled` = :isenabled");
+            $statement->execute(array(':token' => $this->token, ':expirydate' => $this->expiryDate, ':isenabled' => $this->isEnabled));
             $this->id = $this->db->lastInsertId();
             return true;
         } catch (PDOException $e) {
@@ -61,6 +84,10 @@ class SparkToken {
     
     function getToken() {
         return $this->token;
+    }
+    
+    function getExpiryDate() {
+        return $this->expiryDate;
     }
     
     function getIsEnabled() {

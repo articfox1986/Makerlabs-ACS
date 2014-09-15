@@ -2,7 +2,7 @@
 
 class Tools
 {
-    public static function curl_download($Url, $fields = null, $type = 'post')
+    public static function curl_download($Url, $fields = null, $type = 'post', $authType = 'none', $username = '', $password = '')
     {
 	$fields_string = null;
         // is cURL installed yet?
@@ -44,8 +44,9 @@ class Tools
             curl_setopt($ch,CURLOPT_POSTFIELDS,$fields_string);
             }
         }
-    
-        
+        if ($type == 'delete') {
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+        }
 
         // Now set some options (most are optional)
         // Set URL to download
@@ -68,10 +69,17 @@ class Tools
 
         // Timeout in seconds
         curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-
+        
+        // basic auth
+        if ($authType == 'basic') {
+            curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+            curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+        }
+        
         // Download the given URL, and return output
         $output = curl_exec($ch);
-
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        var_dump($httpCode);
         // Close the cURL resource, and free system resources
         curl_close($ch);
 
