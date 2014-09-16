@@ -7,26 +7,31 @@ require 'Bootstrap.php';
 
 $bootstrap = new Bootstrap();
 
-$my_access_token = ACCESS_TOKEN;
-$my_device = DEVICE_ID;
+// load spark user closer
+$sparkUserObj = new SparkUser($bootstrap->db);
+// create spark user
+$sparkUserObj->create(null, '*******', '*****');
+$sparkUserObj->save();
+// load first user
+$sparkUserObj->loadFirst();
 
-$sparkUsername = "myemail@addre.ss";
-$sparkPassword = "password";
-
+// get tokens
 $url = SPARK_PATH . "access_tokens";
-$service = json_decode(Tools::curl_download($url, $fields, 'get', 'basic', $sparkUsername, $sparkPassword));
+$service = json_decode(Tools::curl_download($url, $fields, 'get', 'basic', $sparkUserObj->getUsername(), $sparkUserObj->getPassword()));
 foreach ($service as $value) {
     $tokenObj = new SparkToken($bootstrap->db);
     $tokenObj->create(null, $value->token, $value->expires_at, 0);
     $tokenObj->save();
     echo "token - $value->token, expiry date - $value->expires_at, client - $value->client <br/>";
 }
+// load the latest token
 $tokenObj = new SparkToken($bootstrap->db);
 $tokenObj->loadLatest();
-var_dump($tokenObj);
+
+//var_dump($tokenObj);
 /*
 // create token
-$fields = array('grant_type' => 'password', 'username' => $sparkUsername, 'password' => $sparkPassword);
+$fields = array('grant_type' => 'password', 'username' => $sparkUserObj->getUsername(), 'password' => $sparkUserObj->getPassword());
 $url = "https://api.spark.io/oauth/token";
 $service = json_decode(Tools::curl_download($url, $fields, 'post', 'basic', 'spark', 'spark'));
 var_dump($service);/**/
@@ -34,25 +39,19 @@ var_dump($service);/**/
 /*$token = "*********";
 $url = SPARK_PATH . "access_tokens/$token";
 var_dump($url);
-var_dump(Tools::curl_download($url, $fields, 'delete', 'basic', $sparkUsername, $sparkPassword));
-$service = json_decode(Tools::curl_download($url, $fields, 'delete', 'basic', $sparkUsername, $sparkPassword));
+$service = json_decode(Tools::curl_download($url, $fields, 'delete', 'basic', $sparkUserObj->getUsername(), $sparkUserObj->getPassword()));
 var_dump($service);*/
 die();
-$output_pin = "r1";
-$url = SPARK_PATH . "devices?access_token=". $my_access_token;
-//var_dump($url);
-$fields = array();
-//$fields['access_token'] = $my_access_token;
-//$fields['args'] = $output_pin . "," . $level;
-$fields['args'] = "r1,HIGH";
+// get list of spark cores
+$url = SPARK_PATH . "devices?access_token=". $tokenObj->getToken();
 $service = json_decode(Tools::curl_download($url, $fields, 'get'));
 if (is_null($service)) {
     $message = "Onsite device not responding";
 }
+// open spark token
 $tokenObj = new SparkToken($bootstrap->db);
-$tokenObj->load(1);
-//var_dump($tokenObj->getId());
-//$tokenObj->save();
+$tokenObj->loadLatest();
+
 foreach ($service as $device) {
     $deviceObj = new SparkDevice($bootstrap->db);
     if ($deviceObj->load($deviceId)) {
