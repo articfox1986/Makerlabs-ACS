@@ -68,7 +68,7 @@ class TimeSlot {
         $day = date("l", $timestamp);
         $hour = date("G", $timestamp);
         try {
-            $statement = $this->db->prepare("SELECT * FROM `time_slot` WHERE start_time = :hour AND day = :day LIMIT 1");
+            $statement = $this->db->prepare("SELECT * FROM `time_slot` WHERE start_time = :hour AND day = :day AND is_active = 1 LIMIT 1");
             $statement->execute(array(':hour' => $hour, ':day' => $day));
             if (($row = $statement->fetch()) != false) {
                 $this->id = $row['id'];

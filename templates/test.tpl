@@ -18,8 +18,13 @@
                 {else}
                 <a href="#myModalexample"><button class="btn btn-negative btn-block">Open Gate</button></a>
                 {/if}
+                {if $timeslot == 1}
+                    <button class="btn btn-positive btn-block" type="submit">Time Slot</button>
+                {else}
+                <a href="#myModalexample"><button class="btn btn-negative btn-block">Time Slot</button></a>
+                {/if}
             </form>
-                <a href="javascript: ajaxCall()"><button class="btn btn-negative btn-block">Test Ajax</button></a>
+                <!--<a href="javascript: ajaxCall()"><button class="btn btn-negative btn-block">Test Ajax</button></a>-->
                 
 <div id="myModalexample" class="modal">
   <header class="bar bar-nav">

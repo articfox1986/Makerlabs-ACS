@@ -7,17 +7,27 @@ require 'lib/TimeSlot.php';
 try {
     $bootstrap = new Bootstrap();
     $bootstrap->initSession();
-
+    $timeSlotObj = new TimeSlot($bootstrap->db);
+    if ($timeSlotObj->isItTime(time())) {
+        $timeslot = 1;
+        //echo "<br />It is time!<br />";
+    } else {
+        $timeslot = 0;
+        //echo "<br />Its not time!<br />";
+    }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 //level from the form post
         if ($bootstrap->userObj->getAccessLevel() > 0) {
+            // Check time slots
+
             $level = $_POST["level"];
 
             $my_access_token = ACCESS_TOKEN;
             $my_device = DEVICE_ID;
             $output_pin = "r1";
 
-            $url = SPARK_PATH ."devices/". $my_device . "/relay2";
+            $url = SPARK_PATH . "devices/" . $my_device . "/relay2";
             $fields = array();
             $fields['access_token'] = $my_access_token;
             //$fields['args'] = $output_pin . "," . $level;
@@ -38,16 +48,10 @@ try {
             $accessLogObj->save();
         }
     }
-    // Check time slots
-    $timeSlotObj = new TimeSlot($bootstrap->db);
-    if ($timeSlotObj->isItTime(time())) {
-        //echo "<br />It is time!<br />";
-    } else {
-        //echo "<br />Its not time!<br />";
-    }
     $isAdmin = ($bootstrap->userObj->getAccessLevel() > 1) ? 1 : 0;
     $bootstrap->smarty->assign('isAdmin', $isAdmin);
     $bootstrap->smarty->assign('accessLevel', $bootstrap->userObj->getAccessLevel());
+    $bootstrap->smarty->assign('timeslot', $timeslot);
     $bootstrap->smarty->assign('menuSelected', 'home');
 
     $bootstrap->smarty->assign('url', PATH . "index.php");

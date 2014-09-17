@@ -79,7 +79,7 @@ class Tools
         // Download the given URL, and return output
         $output = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        var_dump($httpCode);
+        //var_dump($httpCode);
         // Close the cURL resource, and free system resources
         curl_close($ch);
 
