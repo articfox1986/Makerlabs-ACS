@@ -2,6 +2,7 @@
 require 'config/database.php';
 require ('./lib/SparkToken.php');
 require ('./lib/SparkDevice.php');
+require ('./lib/SparkFunction.php');
 require ('./lib/SparkUser.php');
 require 'Bootstrap.php';
 
@@ -102,6 +103,9 @@ if ($tokenObj->loadLatest()) {
         echo "<ul>";
         foreach ($funcs as $f) {
             echo "<li>$f</li>";
+            $sparkFunctionObj = new SparkFunction($bootstrap->db);
+            $sparkFunctionObj->create(null, $f, $key);
+            $sparkFunctionObj->save();
         }
         echo "</ul>";
     }
