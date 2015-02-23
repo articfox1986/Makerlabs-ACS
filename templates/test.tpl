@@ -18,6 +18,11 @@
                 {else}
                 <a href="#myModalexample"><button class="btn btn-negative btn-block">Open Gate</button></a>
                 {/if}
+                {if $accessLevel > 2}
+                <button class="btn btn-positive btn-block" type="submit" value='safe' name='safe'>Open Safe</button>
+                {else}
+                <a href="#myModalexample2"><button class="btn btn-negative btn-block">Open Safe</button></a>
+                {/if}
                 {if $timeslot == 1}
                     <button class="btn btn-positive btn-block" type="submit">Time Slot</button>
                 {else}
@@ -31,9 +36,19 @@
     <a class="icon icon-close pull-right" href="#myModalexample"></a>
     <h1 class="title">Open Gate</h1>
   </header>
+  
 
   <div class="content">
     <p class="content-padded" id="modelContent">Sorry but you do not have permission yet to open the gate. please ask a admin to give you access</p>
+  </div>
+</div>
+      <div id="myModalexample2" class="modal">
+  <header class="bar bar-nav">
+    <a class="icon icon-close pull-right" href="#myModalexample2"></a>
+    <h1 class="title">Open Safe</h1>
+  </header>
+    <div class="content">
+    <p class="content-padded" id="modelContent2">Sorry but you do not have permission to open the safe.</p>
   </div>
 </div>
         </div>

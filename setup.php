@@ -43,6 +43,8 @@ if (isset($service->ok) && $service->ok == false) {
 }
 echo "<h2>Tokens</h2>";
 echo "<table><tr><th>Token</th><th>Expiry Date</th><th>Client</th></tr>";
+//var_dump($service);
+//die();
 foreach ($service as $value) {
     $tokenObj = new SparkToken($bootstrap->db);
     $tokenObj->create(null, $value->token, $value->expires_at, 0);
@@ -51,13 +53,15 @@ foreach ($service as $value) {
 }
 echo "</table>";
 
-//die();
+//die();*/
 // load the latest token
 $tokenObj = new SparkToken($bootstrap->db);
 if ($tokenObj->loadLatest()) {
     // get a list of spark cores
     $url = SPARK_PATH . "devices?access_token=" . $tokenObj->getToken();
+    //var_dump($url);
     $service = json_decode(Tools::curl_download($url, $fields, 'get'));
+    //var_dump($service);
     if (is_null($service)) {
         $message = "Cloud cannot be reached";
     }

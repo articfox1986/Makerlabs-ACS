@@ -33,15 +33,19 @@ try {
                 if ($deviceObj->load($deviceId)) {
                     
                 }*/
-
+                
                 $my_device = DEVICE_ID;
                 $output_pin = "r1";
 
-                $url = SPARK_PATH . "devices/" . $my_device . "/relay2";
+                $url = SPARK_PATH . "devices/" . $my_device . "/relay";
                 $fields = array();
                 $fields['access_token'] = $tokenObj->getToken();
                 //$fields['args'] = $output_pin . "," . $level;
                 $fields['args'] = "r1,HIGH";
+                if (isset($_REQUEST['safe']))
+                {
+                    $fields['args'] = "r2,HIGH";
+                }
                 $accessLogObj = new AccessLog($bootstrap->db);
                 $service = json_decode(Tools::curl_download($url, $fields));
                 if (is_null($service)) {
