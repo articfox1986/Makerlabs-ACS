@@ -17,6 +17,9 @@
                     <li class="table-view-cell">
                         <a class="navigate-right" href="timeslots.php" data-transition="slide-in">Time Slots</a>
                     </li>
+					<li class="table-view-cell">
+                        <a class="navigate-right" href="tags.php" data-transition="slide-in">Tags</a>
+                    </li>
             </ul>
             </div>
         </div>
