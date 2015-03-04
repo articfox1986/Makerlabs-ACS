@@ -10,6 +10,7 @@ class Tag {
     private $id;
     private $tag;
     private $name;
+	private $userId;
     private $enabled;
 
     function __construct($db) {
@@ -17,11 +18,12 @@ class Tag {
         $this->db = $db;
     }
     
-    function create($id, $tag, $name, $enabled) {
+    function create($id, $tag, $name, $enabled, $userId = null) {
         $this->id = $id;
         $this->tag = $tag;
         $this->name = $name;
         $this->enabled = $enabled;
+        $this->userId = $userId;
     }
     
     function load($id) {
@@ -34,6 +36,7 @@ class Tag {
                 $this->id = $row['id'];
                 $this->tag = $row['tag'];
                 $this->name = $row['name'];
+				$this->userId = $row['user_id'];
                 $this->enabled = $row['enabled'];
                 return true;
             } else {
@@ -56,6 +59,7 @@ class Tag {
                 $this->id = $row['id'];
                 $this->tag = $row['tag'];
                 $this->name = $row['name'];
+				$this->userId = $row['user_id'];
                 $this->enabled = $row['enabled'];
                 return true;
             } else {
@@ -70,8 +74,8 @@ class Tag {
 	
     function save() {
         try {
-            $statement = $this->db->prepare("INSERT INTO `spark_tag` (`tag`, `name`, `enabled`) VALUES (:tag, :name, :enabled)");
-            $statement->execute(array(':tag' => $this->tag, ':name' => $this->name, ':enabled' => $this->enabled));
+            $statement = $this->db->prepare("INSERT INTO `spark_tag` (`tag`, `name`, `user_id`, `enabled`) VALUES (:tag, :name, :userid, :enabled)");
+            $statement->execute(array(':tag' => $this->tag, ':name' => $this->name, ':userid' => $this->userid, ':enabled' => $this->enabled));
             $this->id = $this->db->lastInsertId();
             return true;
         } catch (PDOException $e) {
@@ -79,6 +83,16 @@ class Tag {
             //ErrorLog::log($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, 16, $e->getLine());
             return false;
         }
+    }
+	
+	function asArray() {
+        $result = array();
+        $result['id'] = $this->id;
+        $result['name'] = $this->name;
+        $result['tag'] = $this->tag;
+        $result['userId'] = $this->userId;
+        $result['enabled'] = $this->enabled;
+        return $result;
     }
     
     function getId() {
@@ -93,6 +107,10 @@ class Tag {
         return $this->name;
     }
     
+    function getUserId() {
+        return $this->userId;
+    }
+    
     function getEnabled() {
         return $this->enabled;
     }
@@ -103,6 +121,10 @@ class Tag {
     
     function setName($name) {
         $this->name = $name;
+    }
+    
+    function setUserId($userId) {
+        $this->userId = $userId;
     }
     
     function setEnabled($enabled) {

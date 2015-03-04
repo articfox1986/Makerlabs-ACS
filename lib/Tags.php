@@ -33,10 +33,17 @@ class Tags {
         }
     }
 
-    function loadAsArray() {
+    function loadAsArray($type = 'all') {
 
         try {
-            $statement = $this->db->prepare("SELECT * FROM `spark_tag`");
+            switch ($type)
+            {
+                case 'unused':
+                    $typeSql = 'user_id IS NULL';
+                default:
+                    $typeSql = '1';
+            }
+            $statement = $this->db->prepare("SELECT * FROM `spark_tag` WHERE {$typeSql}");
             $statement->execute(array());
             while (($row = $statement->fetch()) != false) {
                 $tag = array();

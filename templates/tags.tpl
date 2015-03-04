@@ -10,7 +10,7 @@
             <ul class="table-view">
                 {foreach from=$tags item=tag}
                     <li class="table-view-cell">
-                        <a class="navigate-right" href="editTags.php?id={$tag['id']}" data-transition="slide-in">
+                        <a class="navigate-right" href="editTag.php?id={$tag['id']}" data-transition="slide-in">
                             <span class="badge">{$tag['tag']}</span>
                             {$tag['name']}
                         </a>

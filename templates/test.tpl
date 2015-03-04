@@ -18,7 +18,7 @@
                 {else}
                 <a href="#myModalexample"><button class="btn btn-negative btn-block">Open Gate</button></a>
                 {/if}
-                {if $accessLevel > 2}
+                {if $accessLevel > 1}
                 <button class="btn btn-positive btn-block" type="submit" value='safe' name='safe'>Open Safe</button>
                 {else}
                 <a href="#myModalexample2"><button class="btn btn-negative btn-block">Open Safe</button></a>

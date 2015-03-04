@@ -2,6 +2,8 @@
 
 require 'config/database.php';
 require 'Bootstrap.php';
+require './lib/Tag.php';
+require './lib/Tags.php';
 
 $bootstrap = new Bootstrap();
 $bootstrap->initSession(2);
@@ -16,6 +18,8 @@ if (isset($_GET['id'])) {
                 die();
         }
     }
+    $tagsObj = new Tags($bootstrap->db);
+    $tags = $tagsObj->loadAsArray('unused');
 }
 if (isset($_POST['name'])) {
     $name = $_POST['name'];
@@ -44,4 +48,5 @@ $bootstrap->smarty->assign('menuSelected', 'users');
 
 $bootstrap->smarty->assign('url', PATH . "editUser.php?id={$_GET['id']}");
 $bootstrap->smarty->assign('user', $user);
+$bootstrap->smarty->assign('tags', $tags);
 $bootstrap->smarty->display('edit_user.tpl');
