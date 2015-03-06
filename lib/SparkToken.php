@@ -40,7 +40,7 @@ class SparkToken {
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
-            //ErrorLog::log($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, $this->code, $e->getLine());
+            var_dump($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, $this->code, $e->getLine());
             return false;
         }
     }
@@ -60,7 +60,7 @@ class SparkToken {
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
-            //ErrorLog::log($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, $this->code, $e->getLine());
+            var_dump($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, $this->code, $e->getLine());
             return false;
         }
     }
@@ -73,7 +73,7 @@ class SparkToken {
             return true;
         } catch (PDOException $e) {
             echo $e->getMessage();
-            //ErrorLog::log($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, 16, $e->getLine());
+            var_dump($e->getMessage(), __DIR__, __CLASS__, __FUNCTION__, 16, $e->getLine());
             return false;
         }
     }

@@ -1,11 +1,12 @@
 <?php
 require 'config/database.php';
+require ('./lib/SparkAPI.php');
 require ('./lib/SparkToken.php');
 require ('./lib/SparkDevice.php');
 require ('./lib/SparkFunction.php');
 require ('./lib/SparkUser.php');
 require 'Bootstrap.php';
-
+try {
 $bootstrap = new Bootstrap();
 
 // load spark user closer
@@ -18,57 +19,29 @@ if (isset($_POST['username'])) {
 if ($sparkUserObj->loadFirst()) {
     
 } else {
-    ?>
-    <form method="POST">
-        Username: <input type="text" name="username"><br />
-        Password: <input type="text" name="password"><br />
-        <input type="submit" value="Submit">
-    </form>
-    <?php
+    $bootstrap->smarty->display('login_setup.tpl');
     die();
 }
+$sparkApi = new SparkAPI();
+$tokens = $sparkApi->getTokens($sparkUserObj->getUsername(), $sparkUserObj->getPassword());
+$bootstrap->smarty->assign('tokens', $tokens);
 
-// get tokens
-function getTokens($username, $password) {
-    
-}
-
-$url = SPARK_PATH . "access_tokens";
-$service = json_decode(Tools::curl_download($url, $fields, 'get', 'basic', $sparkUserObj->getUsername(), $sparkUserObj->getPassword()));
-//var_dump($service);
-if (isset($service->ok) && $service->ok == false) {
-    echo "Failed";
-    var_dump($service);
-    die();
-}
-echo "<h2>Tokens</h2>";
-echo "<table><tr><th>Token</th><th>Expiry Date</th><th>Client</th></tr>";
-//var_dump($service);
-//die();
-foreach ($service as $value) {
+foreach ($tokens as $value) {
     $tokenObj = new SparkToken($bootstrap->db);
     $tokenObj->create(null, $value->token, $value->expires_at, 0);
     $tokenObj->save();
-    echo "<tr><td>{$value->token}</td><td>{$value->expires_at}</td><td>{$value->client}</td></tr>";
 }
-echo "</table>";
 
-//die();*/
 // load the latest token
 $tokenObj = new SparkToken($bootstrap->db);
 if ($tokenObj->loadLatest()) {
-    // get a list of spark cores
-    $url = SPARK_PATH . "devices?access_token=" . $tokenObj->getToken();
-    //var_dump($url);
-    $service = json_decode(Tools::curl_download($url, $fields, 'get'));
-    //var_dump($service);
-    if (is_null($service)) {
-        $message = "Cloud cannot be reached";
-    }
+    
+    $sparkApi->setToken($tokenObj->getToken());
+    $cores = $sparkApi->getCores();
+    $bootstrap->smarty->assign('cores', $cores);
     $ids = array();
-    echo "<h2>Sparks</h2>";
-    echo "<table><tr><th>ID</th><th>Name</th><th>Last Heard</th><th>Connected</th></tr>";
-    foreach ($service as $device) {
+    // save the spark devices
+    foreach ($cores as $device) {
         $deviceObj = new SparkDevice($bootstrap->db);
         if ($deviceObj->load($deviceId)) {
             
@@ -77,70 +50,50 @@ if ($tokenObj->loadLatest()) {
             $deviceObj->save();
         }
         $ids[] = $device->id;
-        echo "<tr><td>{$device->id}</td><td>{$device->name}</td><td>{$device->last_heard}</td><td>{$device->connected}</td></tr>";
         //var_dump($device);
     }
-    echo "</table>";
     $functions = array();
     $variables = array();
     
     $fields = array();
-    
+    $nodes = array();
     foreach ($ids as $id) {
-        $url = SPARK_PATH . "devices/{$id}/?access_token=" . $tokenObj->getToken();
-            $nodes[] = array('url' => $url, 'fields' => $fields, 'name' => $id);
+
+        $nodes[$id] = $sparkApi->getCoreDetails($id);
     }
-// fire off all the curl requests at the same time using multi curl
-    $results = Tools::curlMulti($nodes);
-    foreach ($results as $key => $value) {
-        $response = json_decode($value);
-        if (is_null($response)) {
+
+    foreach ($nodes as $key=>$node) {
+        if (!$node)
+        {
             continue;
         }
-        $functions[$response->id] = $response->functions;
-        $variables[$response->id] = $response->variables;
-        //var_dump($response);
-    }
-    echo "<h2>Functions</h2>";
-    foreach ($functions as $key=>$funcs) {
-        echo "<h3>$key</h3>";
-        echo "<ul>";
-        foreach ($funcs as $f) {
-            echo "<li>$f</li>";
+        foreach ($node->functions as $f) {
             $sparkFunctionObj = new SparkFunction($bootstrap->db);
             $sparkFunctionObj->create(null, $f, $key);
             $sparkFunctionObj->save();
         }
-        echo "</ul>";
-    }
     
-    echo "<h2>Variables</h2>";
-    foreach ($variables as $key=>$vars) {
-        echo "<h3>$key</h3>";
-        echo "<ul>";
-        foreach ($vars as $v) {
-            echo "<li>$v</li>";
+        foreach ($node->variables as $key=>$vars) {
+            foreach ($vars as $v) {
+            }
         }
-        echo "</ul>";
     }
-    //var_dump($functions);
-    $url = SPARK_PATH . "webhooks?access_token=" . $tokenObj->getToken();
-    $service = json_decode(Tools::curl_download($url, $fields, 'get'));
-    if (is_null($service)) {
-        $message = "Cloud cannot be reached";
-    }
-    echo "<h2>Webhooks</h2>";
-    echo "<table><tr><th>ID</th><th>Url</th><th>deviceID</th><th>event</th><th>created_at</th></tr>";
-    foreach ($service as $webhooks) {
-        echo "<tr><td>{$webhooks->id}</td><td>{$webhooks->url}</td><td>{$webhooks->deviceID}</td><td>{$webhooks->event}</td><td>{$webhooks->created_at}</td></tr>";
-    }
-    echo "</table>";
-    //var_dump($service);
+
+    $bootstrap->smarty->assign('nodes', $nodes);
+    
+    $webhooks = $sparkApi->getWebhooks();
+    
+    $bootstrap->smarty->assign('webhooks', $webhooks);
+    $bootstrap->smarty->display('setup.tpl');
 } else {
     echo "No tokens!";
     die();
 }
-
+} catch (SmartyException $e)
+{
+    echo $e->getMessage();
+    echo $e->getLine();
+}
 
 //var_dump($tokenObj);
 /*
