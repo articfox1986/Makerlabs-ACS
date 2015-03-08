@@ -63,6 +63,31 @@ class SparkAPI {
         return $service;
     }
     
+    function createToken($username, $password)
+    {
+        // create token
+        $fields = array('grant_type' => 'password', 'username' => $username, 'password' => $password);
+        $url = "https://api.spark.io/oauth/token";
+        $service = json_decode(Tools::curl_download($url, $fields, 'post', 'basic', 'spark', 'spark'));
+        if (is_null($service)) {
+            return false;
+        }
+        return $service;
+    }
+    
+    function deleteToken($username, $password, $token)
+    {
+        // delete token
+        //$token = "178c6bdef901ea3db1d3dd2e8fc65866ceed4c09";
+        $url = $this->sparkUrl . "access_tokens/$token";
+        $service = json_decode(Tools::curl_download($url, $fields, 'delete', 'basic', $username, $password));
+        if (is_null($service)) {
+            return false;
+        }
+        return $service;/* */
+        //var_dump($service->ok);/* */
+    }
+    
     function setToken($token)
     {
         $this->token = $token;

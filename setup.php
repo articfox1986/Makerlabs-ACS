@@ -22,6 +22,9 @@ if ($sparkUserObj->loadFirst()) {
     $bootstrap->smarty->display('login_setup.tpl');
     die();
 }
+
+
+
 $sparkApi = new SparkAPI();
 $tokens = $sparkApi->getTokens($sparkUserObj->getUsername(), $sparkUserObj->getPassword());
 $bootstrap->smarty->assign('tokens', $tokens);
@@ -31,6 +34,9 @@ foreach ($tokens as $value) {
     $tokenObj->create(null, $value->token, $value->expires_at, 0);
     $tokenObj->save();
 }
+
+
+
 
 // load the latest token
 $tokenObj = new SparkToken($bootstrap->db);
@@ -52,6 +58,10 @@ if ($tokenObj->loadLatest()) {
         $ids[] = $device->id;
         //var_dump($device);
     }
+    
+    
+    
+    
     $functions = array();
     $variables = array();
     
@@ -71,15 +81,25 @@ if ($tokenObj->loadLatest()) {
             $sparkFunctionObj = new SparkFunction($bootstrap->db);
             $sparkFunctionObj->create(null, $f, $key);
             $sparkFunctionObj->save();
+            // check relayX
         }
     
         foreach ($node->variables as $key=>$vars) {
             foreach ($vars as $v) {
+                
+                // check if tempX
+                // check if humiX
+                // check boolX
             }
         }
     }
 
     $bootstrap->smarty->assign('nodes', $nodes);
+    
+    
+    
+    
+    
     
     $webhooks = $sparkApi->getWebhooks();
     
@@ -95,6 +115,10 @@ if ($tokenObj->loadLatest()) {
     echo $e->getLine();
 }
 
+// add delete webhook
+// add create webhook
+// 
+// 
 //var_dump($tokenObj);
 /*
   // create token
