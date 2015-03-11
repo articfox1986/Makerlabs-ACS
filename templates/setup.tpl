@@ -31,8 +31,8 @@
 
         <h2>Variables</h2>
         <ul>
-        {foreach from=$node->variables item=var}
-            <li>{$var}</li>   
+        {foreach from=$node->variables key=k item=var}
+            <li>{$k}</li>   
         {/foreach}
         </ul>
     {else}

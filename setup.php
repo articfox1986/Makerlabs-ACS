@@ -77,20 +77,32 @@ if ($tokenObj->loadLatest()) {
         {
             continue;
         }
-        foreach ($node->functions as $f) {
-            $sparkFunctionObj = new SparkFunction($bootstrap->db);
-            $sparkFunctionObj->create(null, $f, $key);
-            $sparkFunctionObj->save();
-            // check relayX
-        }
-    
+		if (!is_null($node->functions))
+		{
+			foreach ($node->functions as $key=>$f) {
+				$sparkFunctionObj = new SparkFunction($bootstrap->db);
+				$sparkFunctionObj->create(null, $f, $key);
+				$sparkFunctionObj->save();
+				// check relayX
+			}
+		}
+		//var_dump($node->variables);
         foreach ($node->variables as $key=>$vars) {
-            foreach ($vars as $v) {
-                
+			if (strpos($key,'temp') !== false) {
+				echo 'There is a temp';
+				// show that the core has a temp
+			}
+			if (strpos($key,'temp') !== false) {
+				echo 'There is a humi';
+				// show the core has humidity
+			}
+			//var_dump($key);
+            //foreach ($vars as $v) {
+                //if ()
                 // check if tempX
                 // check if humiX
                 // check boolX
-            }
+            //}
         }
     }
 
