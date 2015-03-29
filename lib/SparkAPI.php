@@ -42,6 +42,17 @@ class SparkAPI {
         return $service;
     }
     
+    function getVariable($coreId, $variableName)
+    {
+        //$fields = array('name' = $);
+        $url = $this->sparkUrl . "devices/{$coreId}/{$variableName}?access_token=" . $this->token;
+        $service = json_decode($this->curl_download($url, $fields, 'get'));
+        if (is_null($service)) {
+            return false;
+        }
+        return $service;
+    }
+    
     function getWebhooks()
     {
         $url = $this->sparkUrl . "webhooks?access_token=" . $this->token;

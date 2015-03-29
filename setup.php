@@ -4,6 +4,8 @@ require ('./lib/SparkAPI.php');
 require ('./lib/SparkToken.php');
 require ('./lib/SparkDevice.php');
 require ('./lib/SparkFunction.php');
+require ('./lib/SparkVariable.php');
+require ('./lib/SparkReading.php');
 require ('./lib/SparkUser.php');
 require 'Bootstrap.php';
 try {
@@ -81,22 +83,29 @@ if ($tokenObj->loadLatest()) {
 		{
 			foreach ($node->functions as $key=>$f) {
 				$sparkFunctionObj = new SparkFunction($bootstrap->db);
-				$sparkFunctionObj->create(null, $f, $key);
+				$sparkFunctionObj->create(null, $f, $key, 'test');
 				$sparkFunctionObj->save();
 				// check relayX
 			}
 		}
 		//var_dump($node->variables);
         foreach ($node->variables as $key=>$vars) {
-			if (strpos($key,'temp') !== false) {
-				echo 'There is a temp';
+                        $type = 'test';
+                        $typeArray = array('temp', 'humi');
+                        foreach ($typeArray as $t)
+                        {
+                            if (strpos($key,$t) !== false) {
+				//echo 'There is a temp';
+                                $type = $t;
+                                break;
 				// show that the core has a temp
-			}
-			if (strpos($key,'temp') !== false) {
-				echo 'There is a humi';
-				// show the core has humidity
-			}
-			//var_dump($key);
+                            }
+                        }
+			
+                        $sparkVariableObj = new SparkVariable($bootstrap->db);
+                        $sparkVariableObj->create(null, $key, $node->id , $type);
+                        $sparkVariableObj->save();
+			var_dump($key);
             //foreach ($vars as $v) {
                 //if ()
                 // check if tempX

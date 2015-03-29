@@ -4,24 +4,26 @@
  *
  * @author devin
  */
-class SparkFunction {
+class SparkReading {
 
     private $db;
     private $id;
-    private $name;
-    private $deviceId;
+    private $reading;
     private $type;
+    private $variableName;
+    private $deviceId;
 
     function __construct($db) {
         //parent::__construct();
         $this->db = $db;
     }
     
-    function create($id, $name, $deviceId, $type) {
+    function create($id, $reading, $type, $variableName, $deviceId) {
         $this->id = $id;
-        $this->name = $name;
-        $this->deviceId = $deviceId;
+        $this->reading = $reading;
         $this->type = $type;
+        $this->variableName = $variableName;
+        $this->deviceId = $deviceId;
     }
     
     function load($name) {
@@ -33,7 +35,6 @@ class SparkFunction {
                 $this->id = $row['id'];
                 $this->name = $row['name'];
                 $this->deviceId = $row['device_id'];
-                $this->type = $row['type'];
                 return true;
             } else {
                 return false;
@@ -47,8 +48,8 @@ class SparkFunction {
 
     function save() {
         try {
-            $statement = $this->db->prepare("INSERT INTO `spark_function` (`name`, `device_id`, `type`) VALUES (:name, :deviceid, :type) ON DUPLICATE KEY UPDATE `name` = :name, `device_id` = :deviceid, `type` =:type");
-            $statement->execute(array(':name' => $this->name, ':deviceid' => $this->deviceId, ':type' => $this->type));
+            $statement = $this->db->prepare("INSERT INTO `spark_reading` (`reading`,`type`, `variable_name`, `device_id`) VALUES (:reading, :type, :variablename, :deviceid) ON DUPLICATE KEY UPDATE `reading` = :reading, `type` = :type, `variable_name` = :variablename, `device_id` = :deviceid");
+            $statement->execute(array(':reading' => $this->reading, ':type' => $this->type, ':variablename' => $this->variableName, ':deviceid' => $this->deviceId));
             $this->id = $this->db->lastInsertId();
             return true;
         } catch (PDOException $e) {
@@ -62,31 +63,39 @@ class SparkFunction {
         return $this->id;
     }
     
-    function getName() {
-        return $this->name;
-    }
-    
-    function getDeviceId() {
-        return $this->deviceId;
+    function getReading() {
+        return $this->reading;
     }
     
     function getType() {
         return $this->type;
     }
     
+    function getVariableName() {
+        return $this->variableName;
+    }
+    
+    function getDeviceId() {
+        return $this->deviceId;
+    }
+    
     function setId($id) {
         $this->id = $id;
     }
     
-    function setName($name) {
-        $this->name = $name;
-    }
-    
-    function setDeviceId($deviceId) {
-        $this->deviceId = $deviceId;
+    function setReading($reading) {
+        $this->reading = $reading;
     }
     
     function setType($type) {
         $this->type = $type;
+    }
+    
+    function setVariableName($variableName) {
+        $this->variableName = $variableName;
+    }
+    
+    function setDeviceId($deviceId) {
+        $this->deviceId = $deviceId;
     }
 }
