@@ -33,7 +33,7 @@
         </div>
             <div class="input-row">
             <label>Tag</label>
-            <select name="accessLevel">
+            <select name="tag">
                 <option value="0"{if $tag['userId'] eq null} selected=selected{/if}>None</option>
                 {foreach from=$tags item=tag}
                 <option value="0"{if $tag['userId'] eq $user['id']} selected=selected{/if}>{$tag['tag']}</option>

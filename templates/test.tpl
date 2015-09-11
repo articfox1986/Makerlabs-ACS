@@ -23,6 +23,11 @@
                 {else}
                 <a href="#myModalexample2"><button class="btn btn-negative btn-block">Open Safe</button></a>
                 {/if}
+                {if $accessLevel > 1}
+                    <button class="btn btn-positive btn-block" type="submit" value='door' name='door'>Open Door</button>
+                {else}
+                    <a href="#myModalexample2"><button class="btn btn-negative btn-block">Open Door</button></a>
+                {/if}
                 {if $timeslot == 1}
                     <button class="btn btn-positive btn-block" type="submit">Time Slot</button>
                 {else}

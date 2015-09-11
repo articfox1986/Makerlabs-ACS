@@ -36,7 +36,6 @@ if (isset($_POST['accessLevel'])) {
     $accessLevel = $_POST['accessLevel'];
     $user['accessLevel'] = $accessLevel;
     $userObj2->setAccessLevel($accessLevel);
-
     $userObj2->save();
     header("Location: " . PATH . "users.php");
     die();

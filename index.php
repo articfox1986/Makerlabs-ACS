@@ -46,6 +46,10 @@ try {
                 {
                     // safe
                     $fields['args'] = "r2,HIGH";
+                } else if (isset($_REQUEST['door']) && $bootstrap->userObj->getAccessLevel() > 1)
+                {
+                    // safe
+                    $fields['args'] = "r3,HIGH";
                 } else
                 {
                     // gate
