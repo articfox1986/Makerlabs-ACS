@@ -2,7 +2,7 @@
 
 namespace App;
 
-class ParticleDevice
+class ParticleDevice extends Model
 {
     /**
      * The database table used by the model.

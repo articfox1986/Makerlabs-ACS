@@ -2,7 +2,7 @@
 
 namespace App;
 
-class AccessLog
+class AccessLog extends Model
 {
     /**
      * The database table used by the model.

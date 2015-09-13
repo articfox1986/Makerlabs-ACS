@@ -2,7 +2,7 @@
 
 namespace App;
 
-class ParticleToken
+class ParticleToken extends Model
 {
     /**
      * The database table used by the model.

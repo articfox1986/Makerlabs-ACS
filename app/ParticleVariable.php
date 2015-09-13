@@ -1,8 +1,8 @@
-<?php
+<?php namespace App;
 
-namespace App;
+use Illuminate\Database\Eloquent\Model;
 
-class ParticleVariable
+class ParticleVariable extends Model
 {
     /**
      * The database table used by the model.

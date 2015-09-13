@@ -2,7 +2,7 @@
 
 namespace App;
 
-class ParticleFunction
+class ParticleFunction extends Model
 {
     /**
      * The database table used by the model.

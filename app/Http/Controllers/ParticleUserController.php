@@ -16,7 +16,12 @@ class ParticleUserController extends Controller
      */
     public function index()
     {
-        //
+        // get all the tokens
+        $users = ParticleUser::all();
+
+        // load the view and pass the users
+        return \View::make('particleuser.index')
+            ->with('users', $users);
     }
 
     /**
